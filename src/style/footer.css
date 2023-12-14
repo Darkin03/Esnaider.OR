@@ -1,0 +1,40 @@
+footer{
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@keyframes transformarLoka {
+    from{
+        width: 80%;
+        border: 1px solid #68e1fd;
+    } to {
+        width: 20%;
+        border: 1px solid white;
+    }
+}
+
+#seperacion2{
+    border: 1px solid white;
+    width: 80%;
+    margin: auto;
+    animation-name: transformarLoka;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.logo{
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+
+}
+
+.logo span{
+    color:#68e1fd
+}
+

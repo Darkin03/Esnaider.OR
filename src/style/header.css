@@ -1,0 +1,47 @@
+header{
+    color: black;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.nav{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:25px;
+    padding: 10px 5px;
+    box-shadow: 0px 0px 30px 0px #68e1fd;
+}
+
+
+
+.nav .link{
+    color: black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav .link:visited{
+    color: black;
+}
+
+.nav .link:hover{
+    position: relative;
+    bottom: 3px;
+}
+
+.nav .link .iconActive{
+    transition: 0.5s;
+    scale: 1.5;
+}
+
+.nav .link .iconInactive{
+    transition: 0.5s;
+    scale: 1;
+}
+
