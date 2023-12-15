@@ -26,15 +26,15 @@ footer{
     animation-direction: alternate;
 }
 
-.logo{
+footer .logo{
     font-family: 'Permanent Marker', cursive;
     text-align: center;
-    font-size: 30px;
+    font-size: 30px; 
     padding: 10px;
 
 }
 
-.logo span{
+footer .logo span{
     color:#68e1fd
 }
 

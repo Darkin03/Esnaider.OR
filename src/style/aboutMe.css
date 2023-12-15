@@ -1,0 +1,111 @@
+.intoAbout{
+    background-color: white;
+    color: black;
+}
+
+.intoAbout .into{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 30px;
+    justify-content:center;
+    align-items: center;
+    
+}
+
+.intoAbout .into .text{
+    flex: 0.7 0 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 30px
+}
+
+.intoAbout .into .text .hello{
+    text-align: center;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 2em;
+}
+
+.intoAbout .into .text .hello span{
+    font-family:  permanent marker;
+    font-size: 1.2em;
+}
+
+.intoAbout .into .text .rol {
+    text-align: center;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 1.2em;
+}
+
+.intoAbout .into .text .welcome{
+    text-align: center;
+    font-family: 'Shadows Into Light', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+@keyframes heartAnimation {
+    50%{transform: scale(1.25);}
+}
+
+
+.intoAbout .into .text .welcome .heart{
+    animation-name: heartAnimation;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    font-size: 45px;
+}
+
+
+@keyframes fly {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 6px); }
+    100%   { transform: translate(0, -0px); } 
+}
+
+
+.intoAbout .into .pinture {
+    animation-name: fly;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    flex: 0 0 200px;
+}
+
+.atajos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.atajos a{
+    animation-name: flotando;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+}
+
+.atajos-link{
+    color: black;
+    text-decoration: none;
+    font-size: 60px;
+}
+
+.atajos-link:hover{
+    position: relative;
+    bottom: 5px;
+}
+
+.atajos-link:visited{
+    color: black;
+}
+
+.barrasContenedor{
+    position: absolute;
+    top: 40%;
+}
+
+.contenedorWape{
+    background-color: black;
+}

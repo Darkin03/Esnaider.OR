@@ -1,15 +1,63 @@
-import webDeveloper from "../images/Personal data _Flatline.svg";
-
+import data_file from "../images/Personal data _Flatline.svg";
+import webDeveloper from "../images/Web Developer_Flatline.svg";
+import "../style/aboutMe.css";
 import {
   CiHeadphones,
   CiPen,
   CiPenpot,
-  CiUser,
   CiTimer,
   CiPizza,
   CiGlass,
+  CiHeart,
+  CiUser,
+  CiLinkedin,
+  CiServer,
 } from "react-icons/ci";
+
 import { useState } from "react";
+import {  Link } from "react-router-dom";
+const Into = () => {
+  return (
+    <section className="intoAbout">
+
+
+
+      <div className="into">
+        <img className="pinture" src={webDeveloper} />
+        <div className="text">
+          <p className="hello">Hola! soy <span>Esnaider</span></p>
+          <p className="rol">Frontend - Developer</p>
+          <p className="welcome">
+            " Espero encuentres lo que necesitas "
+            <CiHeart className="heart"/>
+          </p>
+        </div>
+      </div>
+
+      <div className="atajos">
+          <Link className="atajos-link">
+            <CiLinkedin />{" "}
+          </Link>
+
+          <Link className="atajos-link">
+              <CiServer />
+          </Link>
+      </div>
+
+
+      <div className="contenedorWape">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#ffffff"
+            fillOpacity="1"
+            d="M0,64L8.9,106.7C17.8,149,36,235,53,229.3C71.1,224,89,128,107,96C124.4,64,142,96,160,117.3C177.8,139,196,149,213,165.3C231.1,181,249,203,267,224C284.4,245,302,267,320,250.7C337.8,235,356,181,373,149.3C391.1,117,409,107,427,117.3C444.4,128,462,160,480,197.3C497.8,235,516,277,533,277.3C551.1,277,569,235,587,234.7C604.4,235,622,277,640,266.7C657.8,256,676,192,693,144C711.1,96,729,64,747,80C764.4,96,782,160,800,186.7C817.8,213,836,203,853,170.7C871.1,139,889,85,907,64C924.4,43,942,53,960,85.3C977.8,117,996,171,1013,213.3C1031.1,256,1049,288,1067,261.3C1084.4,235,1102,149,1120,133.3C1137.8,117,1156,171,1173,192C1191.1,213,1209,203,1227,186.7C1244.4,171,1262,149,1280,170.7C1297.8,192,1316,256,1333,245.3C1351.1,235,1369,149,1387,122.7C1404.4,96,1422,128,1431,144L1440,160L1440,0L1431.1,0C1422.2,0,1404,0,1387,0C1368.9,0,1351,0,1333,0C1315.6,0,1298,0,1280,0C1262.2,0,1244,0,1227,0C1208.9,0,1191,0,1173,0C1155.6,0,1138,0,1120,0C1102.2,0,1084,0,1067,0C1048.9,0,1031,0,1013,0C995.6,0,978,0,960,0C942.2,0,924,0,907,0C888.9,0,871,0,853,0C835.6,0,818,0,800,0C782.2,0,764,0,747,0C728.9,0,711,0,693,0C675.6,0,658,0,640,0C622.2,0,604,0,587,0C568.9,0,551,0,533,0C515.6,0,498,0,480,0C462.2,0,444,0,427,0C408.9,0,391,0,373,0C355.6,0,338,0,320,0C302.2,0,284,0,267,0C248.9,0,231,0,213,0C195.6,0,178,0,160,0C142.2,0,124,0,107,0C88.9,0,71,0,53,0C35.6,0,18,0,9,0L0,0Z"
+            ></path>
+        </svg>
+      </div>
+
+    </section>
+  );
+}
 
 export const SobreMi = () => {
   const [activo, setActivo] = useState(false);
@@ -123,8 +171,9 @@ export const Pasatiempos = () => {
 export function InfoSobreMi() {
   return (
     <>
+    <Into/>
       <div className="sobreMi">
-        <img className="inicioImagen-foto" src={webDeveloper} />
+        <img className="inicioImagen-foto" src={data_file} />
         <div className="sobreMi-contenido">
           <SobreMi />
           <ExperienciaLaboral />
