@@ -1,12 +1,15 @@
 .intoAbout{
     background-color: white;
     color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 5px
 }
 
 .intoAbout .into{
     display: flex;
     flex-wrap: wrap-reverse;
-    gap: 30px;
+    gap: 20px;
     justify-content:center;
     align-items: center;
     
@@ -73,39 +76,30 @@
     flex: 0 0 200px;
 }
 
-.atajos{
+.intoAbout .navLink{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 20px;
 }
 
-.atajos a{
-    animation-name: flotando;
-    animation-duration: 4s;
-    animation-delay: 2s;
-    animation-iteration-count: infinite;
-}
-
-.atajos-link{
+.intoAbout .navLink .link{
     color: black;
     text-decoration: none;
     font-size: 60px;
 }
 
-.atajos-link:hover{
+.intoAbout .navLink .link:hover{
     position: relative;
     bottom: 5px;
 }
 
-.atajos-link:visited{
+.intoAbout .navLink .link:visited{
     color: black;
 }
 
-.barrasContenedor{
-    position: absolute;
-    top: 40%;
-}
 
-.contenedorWape{
+
+.wapeContainer{
     background-color: black;
 }

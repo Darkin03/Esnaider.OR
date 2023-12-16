@@ -13,9 +13,9 @@ import {
   CiLinkedin,
   CiServer,
 } from "react-icons/ci";
-
+import { FaGithub } from "react-icons/fa";
 import { useState } from "react";
-import {  Link } from "react-router-dom";
+
 const Into = () => {
   return (
     <section className="intoAbout">
@@ -34,18 +34,24 @@ const Into = () => {
         </div>
       </div>
 
-      <div className="atajos">
-          <Link className="atajos-link">
-            <CiLinkedin />{" "}
-          </Link>
+      <div className="navLink">
+          
+          <a className="link"  href="">
+          <CiLinkedin />
+          </a>
+          
+          <a className="link" href="">
+          <CiServer />
+          </a>
 
-          <Link className="atajos-link">
-              <CiServer />
-          </Link>
+          <a className="link" href="">
+          <FaGithub />
+          </a>
+         
       </div>
 
 
-      <div className="contenedorWape">
+      <div className="wapeContainer">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
             fill="#ffffff"

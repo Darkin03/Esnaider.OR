@@ -1,43 +1,63 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../style/header.css";
-import {
-    CiPhone,
-    CiLaptop,
-    CiMedal,
-    CiUser,
-  } from "react-icons/ci";
-  
-export function Header (){
+import { CiPhone, CiLaptop, CiMedal, CiUser } from "react-icons/ci";
 
-    const [over, setOver] = useState(false);
+export function Header() {
+  const [iconState, setIconState] = useState({
+    user: false,
+    medal: false,
+    laptop: false,
+    phone: false,
+  });
 
-    const handleOver = () => {
-        setOver(true);
-    }
+  const handleIconOver = (icon) => {
+    setIconState((prev) => ({ ...prev, [icon]: true }));
+  };
 
-    const handleOverOut = () => {
-        setOver(false)
-    }
-    return(
-        <header className="header">
-            <nav className="nav">
-                <Link to="/" className="link" onMouseOver={handleOver} onMouseOut={handleOverOut}  >
-                    <CiUser className={over ? "iconActive" : "iconInactive" }  /> SobreMi
-                </Link>
+  const handleIconOut = (icon) => {
+    setIconState((prev) => ({ ...prev, [icon]: false }));
+  };
 
-                <Link to="/habilidades" className="link">
-                    <CiMedal /> Habilidades
-                </Link>
+  return (
+    <header className="header">
+      <nav className="nav">
+        <Link
+          to="/"
+          className="link"
+          onMouseOver={() => handleIconOver("user")}
+          onMouseOut={() => handleIconOut("user")}
+        >
+          <CiUser className={iconState.user ? "iconActive" : "iconInactive"} /> SobreMi
+        </Link>
 
-                <Link to="/proyectos" className="link">
-                    <CiLaptop /> Proyectos
-                </Link>
+        <Link
+          to="/habilidades"
+          className="link"
+          onMouseOver={() => handleIconOver("medal")}
+          onMouseOut={() => handleIconOut("medal")}
+        >
+          <CiMedal className={iconState.medal ? "iconActive" : "iconInactive"} /> Habilidades
+        </Link>
 
-                <Link to="/contactos" className="link">
-                    <CiPhone /> Contactos
-                </Link>
-        </nav>
-        </header>
-    )
+        <Link
+          to="/proyectos"
+          className="link"
+          onMouseOver={() => handleIconOver("laptop")}
+          onMouseOut={() => handleIconOut("laptop")}
+        >
+          <CiLaptop className={iconState.laptop ? "iconActive" : "iconInactive"} /> Proyectos
+        </Link>
+
+        <Link
+          to="/contactos"
+          className="link"
+          onMouseOver={() => handleIconOver("phone")}
+          onMouseOut={() => handleIconOut("phone")}
+        >
+          <CiPhone className={iconState.phone ? "iconActive" : "iconInactive"} /> Contactos
+        </Link>
+      </nav>
+    </header>
+  );
 }
