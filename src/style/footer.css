@@ -1,12 +1,10 @@
-footer{
-    background-color: black;
-    color: white;
+.footer{
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-@keyframes transformarLoka {
+@keyframes crazyAnimation {
     from{
         width: 80%;
         border: 1px solid #68e1fd;
@@ -16,17 +14,17 @@ footer{
     }
 }
 
-#seperacion2{
+.footer .separation hr{
     border: 1px solid white;
     width: 80%;
     margin: auto;
-    animation-name: transformarLoka;
+    animation-name: crazyAnimation;
     animation-duration: 6s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
 
-footer .logo{
+.footer .logo{
     font-family: 'Permanent Marker', cursive;
     text-align: center;
     font-size: 30px; 
@@ -34,7 +32,7 @@ footer .logo{
 
 }
 
-footer .logo span{
+.footer .logo span{
     color:#68e1fd
 }
 

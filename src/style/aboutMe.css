@@ -103,3 +103,95 @@
 .wapeContainer{
     background-color: black;
 }
+
+
+
+
+
+.aboutMe{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+@keyframes flotando {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 6px); }
+    100%   { transform: translate(0, -0px); } 
+}
+
+
+
+.aboutMe .pintureContainer {
+    flex: 0 0 406x;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.aboutMe .pintureContainer .pinture{
+    animation-name: flotando;
+    animation-duration: 3s;
+    animation-delay: 5s;
+    animation-iteration-count: infinite;
+}
+
+.aboutMe .infoContainer{
+    font-family: 'Caveat', cursive;
+    font-size: 30px;
+    text-align: justify;
+    flex: 0.7 0 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.tituloFragmentoActivo{
+    color: #68e1fd;
+}
+
+.descripcionTl,.experienciaTl,.pasatiemposTl.habilidadesTl{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-family: 'Permanent Marker', cursive;
+    margin-bottom: 5px;
+}
+
+
+@keyframes agrandar {
+    from{scale: 0;} to{scale: 1;}
+}
+
+
+#iconoFragmento{
+    font-size: 60px;
+}
+
+.iconoFragmentoActivo{
+    transition: 0.5s;
+    scale: 1.25;
+}
+
+.iconoFragmentoDesactivado{
+    transition: 0.5s;
+    scale: 1;
+}
+
+
+
+.misPasatiempos ul{
+    list-style: none;
+}
+
+.misPasatiempos li{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}

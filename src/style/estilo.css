@@ -7,108 +7,12 @@
 
 body{
     background-color: black;
+    color: white;
 }
 
 
 
-@keyframes flotando {
-    0% { transform: translate(0,  0px); }
-    50%  { transform: translate(0, 6px); }
-    100%   { transform: translate(0, -0px); } 
-}
 
-.corazon{
-    animation-name: latidoCorazon;
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
-}
-
-
-.contenedorWape{
-    background-color: black;
-}
-
-.cuerpoContenedor{
-    background-color: black;
-    color: aliceblue;
-}
-.sobreMi{
-    background-color: black;
-    padding: 25px 1vw;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-
-}
-
-.sobreMi img{
-    animation-name: flotando;
-    animation-duration: 3s;
-    animation-delay: 5s;
-    animation-iteration-count: infinite;
-    
-}
-
-.sobreMi-contenido{
-    font-family: 'Caveat', cursive;
-    font-size: 30px;
-    color: aliceblue;
-    text-align: justify;
-    max-width: 600px;
-    padding: 0px 10px;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
-.tituloFragmentoActivo{
-    color: #68e1fd;
-}
-
-.descripcionTl,.experienciaTl,.pasatiemposTl.habilidadesTl{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    font-family: 'Permanent Marker', cursive;
-    margin-bottom: 5px;
-}
-
-
-@keyframes agrandar {
-    from{scale: 0;} to{scale: 1;}
-}
-
-
-#iconoFragmento{
-    font-size: 60px;
-}
-
-.iconoFragmentoActivo{
-    transition: 0.5s;
-    scale: 1.25;
-}
-
-.iconoFragmentoDesactivado{
-    transition: 0.5s;
-    scale: 1;
-}
-
-
-
-.misPasatiempos ul{
-    list-style: none;
-}
-
-.misPasatiempos li{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
 
 .habilidades{
     text-align: center;
@@ -447,15 +351,3 @@ img,.habilidades-imagen{
     position: relative;
     bottom: 5px;
 }
-@media only screen and (max-width: 500px)  {
-    
-
-    img,.habilidades-imagen,.sobreMi-contenido{
-        width: 100%;
-    }
-
-    .sobreMi h1, .habilidades h1, .proyectos h1, .logo h1{
-        font-size: 2rem;
-    }
-  }
-

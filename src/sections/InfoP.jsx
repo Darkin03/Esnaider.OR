@@ -65,7 +65,7 @@ const Into = () => {
   );
 }
 
-export const SobreMi = () => {
+const SobreMi = () => {
   const [activo, setActivo] = useState(false);
   const mouseEncima = () => {
     setActivo(true);
@@ -90,15 +90,15 @@ export const SobreMi = () => {
       </div>
 
       <p>
-        Hola, me llamo Esnaider Ortega, mayormente soy autodidacta y trato de
-        mejorar continuamente mis habilidades como desarollador para rendir y
-        trabajar de la mejor manera en el amplio mundo del desarollo web.
+        Me llamo Esnaider Ortega, me gusta ser autodidacta para
+        mejorar continuamente mis habilidades como desarollador y poder 
+        trabajar de la mejor manera en el amplio y cambiante mundo del desarollo web.
       </p>
     </div>
   );
 };
 
-export const ExperienciaLaboral = () => {
+const ExperienciaLaboral = () => {
   const [activo, setActivo] = useState(false);
   const mouseEncima = () => {
     setActivo(true);
@@ -130,7 +130,7 @@ export const ExperienciaLaboral = () => {
   );
 };
 
-export const Pasatiempos = () => {
+const Pasatiempos = () => {
   const [activo, setActivo] = useState(false);
   const mouseEncima = () => {
     setActivo(true);
@@ -178,9 +178,11 @@ export function InfoSobreMi() {
   return (
     <>
     <Into/>
-      <div className="sobreMi">
-        <img className="inicioImagen-foto" src={data_file} />
-        <div className="sobreMi-contenido">
+      <div className="aboutMe">
+        <div className="pintureContainer">
+          <img className="pinture" src={data_file} />
+        </div>
+        <div className="infoContainer">
           <SobreMi />
           <ExperienciaLaboral />
           <Pasatiempos />
