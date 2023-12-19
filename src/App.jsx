@@ -1,5 +1,5 @@
 //importando los componentes de navegacion
-import { InfoSobreMi } from "./sections/InfoP";
+import { AboutMe} from "./components/aboutMe";
 import { Hbcontenedor } from "./sections/HbContendor";
 import { Prcontenedor } from "./sections/PrContenedor";
 import { Contactos } from "./sections/Contactos";
@@ -15,9 +15,9 @@ function App() {
       
       <Header/>
 
-      <section className="cuerpoContenedor">
+      <section >
         <Routes>
-          <Route path="/" element={<InfoSobreMi />} />
+          <Route path="/" element={<AboutMe />} />
           <Route path="/habilidades" element={<Hbcontenedor />} />
           <Route path="/proyectos" element={<Prcontenedor />} />
           <Route path="/contactos" element={<Contactos />} />

@@ -104,10 +104,6 @@
     background-color: black;
 }
 
-
-
-
-
 .aboutMe{
     display: flex;
     flex-wrap: wrap;
@@ -150,47 +146,46 @@
     gap: 40px;
 }
 
-.tituloFragmentoActivo{
-    color: #68e1fd;
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.descripcionTl,.experienciaTl,.pasatiemposTl.habilidadesTl{
+.titleContainer{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 15px;
     font-family: 'Permanent Marker', cursive;
-    margin-bottom: 5px;
 }
 
-
-@keyframes agrandar {
-    from{scale: 0;} to{scale: 1;}
+.activeTitle {
+    color: #68e1fd;
 }
 
-
-#iconoFragmento{
+.titleContainer #icon{
     font-size: 60px;
 }
 
-.iconoFragmentoActivo{
+.activeIcon{
     transition: 0.5s;
     scale: 1.25;
 }
 
-.iconoFragmentoDesactivado{
+.inactiveIcon{
     transition: 0.5s;
     scale: 1;
 }
 
 
 
-.misPasatiempos ul{
+.hobbies{
     list-style: none;
 }
 
-.misPasatiempos li{
+.hobbies li{
     display: flex;
     align-items: center;
     gap: 15px;
