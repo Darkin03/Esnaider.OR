@@ -139,7 +139,6 @@
 .aboutMe .infoContainer{
     font-family: 'Caveat', cursive;
     font-size: 30px;
-    text-align: justify;
     flex: 0.7 0 300px;
     display: flex;
     flex-direction: column;
@@ -150,6 +149,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding: 5px;
 }
 
 .titleContainer{
@@ -183,10 +183,24 @@
 
 .hobbies{
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.hobbies li{
+.hobbies .item{
     display: flex;
     align-items: center;
     gap: 15px;
+}
+
+.hobbies .item .icon{
+    transform: scale(1);
+    transition: 500ms;
+}
+
+.hobbies .item .iconActive{
+    transform: scale(1.25);
+    transition: 500ms;
+    color: #68e1fd;
 }

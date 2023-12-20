@@ -112,6 +112,68 @@ const Jobs = () => {
   );
 };
 
+const HobbiesList = () => {
+  const [iconActive, setIconActive] = useState({
+    headphones: false,
+    penpot: false,
+    pen: false,
+    glass: false,
+  });
+
+  const handleItemOver = (icon) => {
+    setIconActive((prev) => ({ ...prev, [icon]: true }));
+  };
+
+  const handleItemOut = (icon) => {
+    setIconActive((prev) => ({ ...prev, [icon]: false }));
+  };
+
+  return (
+    <ul className="hobbies">
+      <li>
+        <div
+            className="item"
+             onMouseOver={() => handleItemOver("headphones")}
+             onMouseOut={() => handleItemOut("headphones")}
+        >
+          <CiHeadphones className= { iconActive.headphones? 'iconActive':'icon'} /> Escuchar Musica
+        </div>    
+      </li>
+
+      <li>
+        <div
+            className="item"
+             onMouseOver={() => handleItemOver("penpot")}
+             onMouseOut={() => handleItemOut("penpot")}
+        >
+          <CiPenpot  className= { iconActive.penpot? 'iconActive':'icon'} /> Leer
+        </div>    
+      </li>
+
+      <li>
+        <div
+            className="item"
+             onMouseOver={() => handleItemOver("pen")}
+             onMouseOut={() => handleItemOut("pen")}
+        >
+          <CiPen  className= { iconActive.pen? 'iconActive':'icon'} /> Dibujar
+        </div>    
+      </li>
+
+      <li>
+        <div
+            className="item"
+             onMouseOver={() => handleItemOver("glass")}
+             onMouseOut={() => handleItemOut("glass")}
+        >
+          <CiGlass  className= { iconActive.glass? 'iconActive':'icon'} /> Una buena taza de cafe
+        </div>    
+      </li>
+  
+    </ul>
+  );
+};
+
 const Hobbies = () => {
   const [active, setActive] = useState(false);
   const mouseOver = () => {
@@ -127,23 +189,7 @@ const Hobbies = () => {
         <CiPizza id="icon" className={ active ? "activeIcon" : "inactiveIcon"}/>
       </div>
 
-      <ul className="hobbies">
-        <li>
-          <CiHeadphones /> Escuchar Musica
-        </li>
-
-        <li>
-          <CiPenpot />Leer
-        </li>
-
-        <li>
-          <CiPen />Dibujar
-        </li>
-
-        <li>
-          <CiGlass /> Una buena taza de cafe
-        </li>
-      </ul>
+      <HobbiesList />
 </div>
 );
 };
@@ -159,8 +205,8 @@ export function AboutMe() {
         </div>
         <div className="infoContainer">
           <Description />
-          <Jobs />
           <Hobbies />
+          <Jobs />
         </div>
       </div>
       
