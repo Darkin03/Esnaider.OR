@@ -1,6 +1,7 @@
 import data_file from "../images/Personal data _Flatline.svg";
 import webDeveloper from "../images/Web Developer_Flatline.svg";
 import "../style/aboutMe.css";
+import { jobs } from "../data/jobs";
 import {
   CiHeadphones,
   CiPen,
@@ -14,6 +15,7 @@ import {
   CiServer,
 } from "react-icons/ci";
 import { FaGithub } from "react-icons/fa";
+import { MdWorkOutline } from "react-icons/md";
 import { useState } from "react";
 
 const Into = () => {
@@ -36,15 +38,15 @@ const Into = () => {
 
       <div className="navLink">
           
-          <a className="link"  href="">
+          <a className="link"  href="https://www.linkedin.com/in/esnaideror/">
           <CiLinkedin />
           </a>
           
-          <a className="link" href="">
+          <a className="link" href="https://github.com/Darkin03">
           <CiServer />
           </a>
 
-          <a className="link" href="">
+          <a className="link" href="https://github.com/Darkin03/Esnaider.OR">
           <FaGithub />
           </a>
          
@@ -81,9 +83,10 @@ const Description = () => {
       </div>
 
       <p>
-        Me llamo Esnaider Ortega, me gusta ser autodidacta para
-        mejorar continuamente mis habilidades como desarollador y poder 
-        trabajar de la mejor manera en el amplio y cambiante mundo del desarollo web.
+        Mi nombre es Esnaider Ortega, 
+        y me apasiona ser autodidacta para perfeccionar constantemente mis habilidades como desarrollador.
+         Busco destacarme en el dinámico mundo del desarrollo web,
+          siempre en busca de oportunidades para aplicar mis conocimientos y trabajar de la mejor manera.
       </p>
     </div>
   );
@@ -105,8 +108,24 @@ const Jobs = () => {
       </div>
 
       <p>
-        Actualmente no tengo experiencia laboral pero estoy buscando trabajo
-        para empezar lo mas pronto posible.
+        Actualmente estas son mis experiencias laborales:
+        <ul className="jobs">
+          {jobs.map((job) => (
+            <li key={job.id}>
+              <div className="job"> 
+                <h3 className="titleCompany">{job.company}<MdWorkOutline /></h3>
+                <div className="titleDates">
+                  <p>{job.iniDate}</p>
+                  <p>{job.endDate}</p>
+                </div>
+                <h4>{job.rol}</h4>
+                <p>{job.description}</p>
+              </div>         
+            </li>
+          ))}
+
+        </ul>
+
       </p>
     </div>
   );
