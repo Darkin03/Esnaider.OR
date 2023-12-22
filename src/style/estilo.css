@@ -34,37 +34,60 @@ body{
 }
 
 @keyframes sacudida {
-    0%{
-        transform: scale(1.05);
-        
+    0%, 100% {
+        transform: scale(0);
+        opacity: 0;
     }
 
-    20%{
-        transform: rotate(6deg) scale(1.05);
-    
-        
+    10% {
+        transform: scale(1.2);
+        opacity: 1;
     }
 
-    40%{
-        transform: rotate(-6deg) scale(1.05);
-
-        
-        
+    20%, 30% {
+        transform: scale(1);
+        opacity: 1;
     }
 
-    60%{
-        transform: rotate(6deg) scale(1.05);
-       
-   
+    40%, 45% {
+        transform: rotate(30deg);
+        opacity: 1;
     }
 
-    80%{
-        transform: rotate(-6deg) scale(1.05);
-        
-        
+    50%, 55% {
+        transform: rotate(-30deg);
+        opacity: 1;
     }
 
+    60%, 70% {
+        transform: scale(1);
+         opacity: 1;
+    }
+
+    80%, 90% {
+        transform: scale(0);
+        opacity: 0;
+    }
 }
+
+.habilidadCarta-icono i {
+    font-size: 80px;
+    animation-name: sacudida;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+
+
+.habilidadCarta-icono i {
+    font-size: 80px;
+    animation-name: sacudida;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
 
 .habilidadesInicio{
     padding: 25px 1vw;
@@ -97,13 +120,7 @@ body{
    
 }
 
-.habilidadCarta-icono i{
-    font-size: 80px;
-    animation-name: sacudida;
-   animation-duration: 5s;
-   animation-iteration-count: infinite;
 
-}
 
 .habilidadesContenedor{
     display: flex;

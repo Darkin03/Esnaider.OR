@@ -15,8 +15,8 @@ import {
   CiServer,
 } from "react-icons/ci";
 import { FaGithub } from "react-icons/fa";
-import { MdWorkOutline } from "react-icons/md";
 import { useState } from "react";
+import { JobsList } from "./jobsList";
 
 const Into = () => {
   return (
@@ -92,6 +92,34 @@ const Description = () => {
   );
 };
 
+const  JobsList = (props) => {
+
+  const [jobActive, setJobActive] = useState(false); 
+  const mouseOver = () => {
+      setJobActive(true);
+  };
+  const mouseOut = () => {
+      setJobActive(false);
+  };
+
+  return (
+      <li  onMouseOver={mouseOver} onMouseOut={mouseOut}>
+            <div className="job"> 
+              <h3 className="titleCompany">
+                  {props.company}
+                  <MdWorkOutline className= { jobActive? 'iconActive':'icon' }  />
+               </h3>
+              <div className="titleDates">
+                <p>{props.iniDate}</p>
+                <p>{props.endDate}</p>
+              </div>
+              <h4>{props.rol}</h4>
+              <p>{props.description}</p>
+            </div>         
+          </li>
+  )
+}
+
 const Jobs = () => {
   const [active, setActive] = useState(false);
   const mouseOver = () => {
@@ -107,26 +135,22 @@ const Jobs = () => {
         <CiTimer id="icon" className={ active ? "activeIcon" : "inactiveIcon"}/>
       </div>
 
-      <p>
-        Actualmente estas son mis experiencias laborales:
+      <p>Actualmente estas son mis experiencias laborales:</p>
         <ul className="jobs">
           {jobs.map((job) => (
-            <li key={job.id}>
-              <div className="job"> 
-                <h3 className="titleCompany">{job.company}<MdWorkOutline /></h3>
-                <div className="titleDates">
-                  <p>{job.iniDate}</p>
-                  <p>{job.endDate}</p>
-                </div>
-                <h4>{job.rol}</h4>
-                <p>{job.description}</p>
-              </div>         
-            </li>
+            <JobsList 
+              key={job.id}
+              company={job.company}
+              iniDate={job.iniDate}
+              endDate={job.endDate}
+              rol={job.rol}
+              description={job.description}
+              />
           ))}
 
         </ul>
 
-      </p>
+      
     </div>
   );
 };

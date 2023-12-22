@@ -1,5 +1,5 @@
 //importando los componentes de navegacion
-import { AboutMe} from "./components/aboutMe";
+import { AboutMe } from "./components/AboutMe";
 import { Hbcontenedor } from "./sections/HbContendor";
 import { Prcontenedor } from "./sections/PrContenedor";
 import { Contactos } from "./sections/Contactos";

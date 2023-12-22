@@ -221,7 +221,21 @@
     flex-wrap: wrap-reverse;
 }
 
+.jobs .job .titleCompany .icon{
+    transform: scale(1);
+    transition: 500ms;
+}
+
+
+.jobs .job .titleCompany .iconActive{
+    transform: scale(1.25);
+    transition: 500ms;
+    color: #68e1fd;
+}
+
+
 .jobs .job .titleDates{
     display: flex;
     justify-content: space-between;
 }
+
