@@ -1,0 +1,68 @@
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skills .into{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.skills .into  .pinture{
+    flex: 0 0 406px;
+    animation-name: fly;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+
+.skills .into .titleContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 0.4 0 400px;
+}
+
+.skills .into .titleContainer .title {
+    text-align: center;
+    font-size: 40px;
+}
+
+
+
+
+
+.skillsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.skillsContainer .skill{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Caveat', cursive;
+    font-size: 25px;
+}
+
+.skillsContainer .skill .icon{
+    color: white;
+    font-size: 60px;
+    transition: 0.5s;
+}
+
+.skillsContainer .skill .activeIcon{
+    font-size: 60px;
+    color: #68e1fd;
+    transform: scale(1.01);
+    transition: 0.5s;    
+}
+
+.skillsConainer .skill .ActiveText{
+    color:#68e1fd;
+}

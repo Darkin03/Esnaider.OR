@@ -16,7 +16,7 @@ import {
 } from "react-icons/ci";
 import { FaGithub } from "react-icons/fa";
 import { useState } from "react";
-import { JobsList } from "./jobsList";
+import { MdWorkOutline } from "react-icons/md";
 
 const Into = () => {
   return (
