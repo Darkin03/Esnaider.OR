@@ -32,7 +32,23 @@
 }
 
 
+.skills .into .titleContainer .title .activeTitle {
+    color: #68e1fd;
+}
 
+.skills .into .titleContainer .title .titleContainer .icon{
+    font-size: 60px;
+}
+
+.skills .into .titleContainer .title .activeIcon{
+    transition: 0.5s;
+    scale: 1.25;
+}
+
+.skills .into .titleContainer .title .inactiveIcon{
+    transition: 0.5s;
+    scale: 1;
+}
 
 
 .skillsContainer{

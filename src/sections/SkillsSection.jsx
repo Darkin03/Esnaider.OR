@@ -2,7 +2,7 @@ import webDeveloper from "../images/Data Arranging_Flatline.svg";
 import { CiStar} from "react-icons/ci";
 import { useState} from "react";
 import { Skills } from "../components/Skills";
-export const Hbcontenedor = () =>{
+export const SkillsSection = () =>{
     const [active, setActive] = useState(false);
     const mouseOver = () => {
       setActive(true);
