@@ -1,47 +1,47 @@
 import { useState } from "react"
-import { proyectos } from "../data/proyectos"
+import { proyects } from "../data/proyectos"
 import { ProyectoCarta } from "../components/ProyectoCarta";
 import { CiLaptop} from "react-icons/ci";
+import '../style/proyects.css'
 
 export const Prcontenedor = () =>{
 
-    const [activo,setActivo] = useState(false)
-    const mouseEncima = () =>{
-        setActivo(true)
+    const [active,setActive] = useState(false)
+    const onMouseOver  = () =>{
+        setActive(true)
     }
-    const mouseNoEncima = () => {
-        setActivo(false)
+    const onMouseOut  = () => {
+        setActive(false)
     }
 
     return (
-        <>
         
-        <div className="proyectos" onMouseOver={mouseEncima}    onMouseOut={mouseNoEncima}>
-            <div className="descripcionTl">
-                <h1  className={activo? 'tituloFragmentoActivo':''}  id="proyectosTitulo">Proyectos</h1>
+        <section className="container proyectsSection" onMouseOver={onMouseOver}    onMouseOut={onMouseOut}>
+            <div className="titleContainer">
+                <h1  className={active? 'activeTitle':'title'}>Proyectos</h1>
                 <CiLaptop 
-                    className={activo? 'iconoFragmentoActivo':'iconoFragmentoDesactivado'}
-                    id='iconoFragmento'
+                    className={active? 'activeIcon':'icon'}
                 />
             </div>
 
-            <div className="proyectosContenedor">
-            {
-                proyectos.map((proyecto)=>(
+            <div className="proyects">
+                {
+                proyects.map((proyect)=>(
                     <ProyectoCarta
-                        key={proyecto.id}
-                        icono={proyecto.icono}
-                        nombre={proyecto.nombre}
-                        descripcion={proyecto.descripcion}
-                        link={proyecto.link}
-                    ></ProyectoCarta>
-                ))
-            }
+                        key={proyect.id}
+                        pinture={proyect.pinture}
+                        name={proyect.name}
+                        description={proyect.description}
+                        link={proyect.link}
+                     ></ProyectoCarta>
+                             ))
+                }
             </div>
+           
 
-        </div>
+        </section>
         
-        </>
+ 
         
     )
 }

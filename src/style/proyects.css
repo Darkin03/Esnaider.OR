@@ -1,0 +1,97 @@
+.proyectsSection{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 40px;
+}
+
+.proyects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 5px;
+}
+
+.proyects .proyect{
+    text-decoration: none;
+}
+
+.proyects .proyect:visited{
+    color: black;
+}
+
+.proyects .proyect{
+    background-color: white;
+    border-radius: 20px;
+    transition: 500ms;
+    flex: 0 1 250px;
+    height: 300px;
+    overflow: hidden;
+}
+
+
+.proyects .proyect:hover{
+    transform: scale(1.05);
+}
+
+
+.proyects .proyect .pintureContainer{
+    height: 50%;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+}
+
+.proyects .proyect .pintureContainer .pinture{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+
+.proyects .proyect .content{
+    color: black;
+    display: flex;
+    gap: 3px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 5px;
+    font-size: 25px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.proyects .proyect .content .title{
+    font-family: 'Permanent Marker', cursive;
+}
+
+.proyects .proyect .content .description{
+    font-family: 'Caveat', cursive;
+}
+
+
+
+.finPagina{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.finPagina img{
+    animation-name: flotando;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes led {
+    50%{
+        text-shadow: 2px 2px #68e1fd;
+       
+    }
+}
+
+
