@@ -6,7 +6,7 @@ import { Contacts } from "./sections/Contactos";
 import { Header} from "./components/Header";
 import {  Route, Routes } from "react-router-dom";
 import { Footer } from "./components/footer";
-
+import "./style/style.css";
 
 
 function App() {
