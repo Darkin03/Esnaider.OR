@@ -2,7 +2,7 @@
 import { AboutMe } from "./components/AboutMe";
 import { SkillsSection } from "./sections/SkillsSection";
 import { Prcontenedor } from "./sections/PrContenedor";
-import { Contactos } from "./sections/Contactos";
+import { Contacts } from "./sections/Contactos";
 import { Header} from "./components/Header";
 import {  Route, Routes } from "react-router-dom";
 import { Footer } from "./components/footer";
@@ -20,7 +20,7 @@ function App() {
           <Route path="/" element={<AboutMe />} />
           <Route path="/habilidades" element={<SkillsSection />} />
           <Route path="/proyectos" element={<Prcontenedor />} />
-          <Route path="/contactos" element={<Contactos />} />
+          <Route path="/contactos" element={<Contacts />} />
         </Routes>
        
       </section>

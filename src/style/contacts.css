@@ -1,0 +1,57 @@
+.contacts {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 35px;
+}
+
+.contacts .pintureContainer{
+    flex: 0 1 406px;
+    display: flex;
+    align-items: center;
+}
+
+.contacts .pintureContainer .pinture{
+    width: 406px;
+}
+
+.contacts .container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    flex: 0 1 306px;
+}
+
+.contacts .contactsContainer{
+    flex: 0 1 406px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacts .container .contactList{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contacts .container .contactList .link{
+    text-decoration: none;
+    transition: 500ms;
+}
+
+.contacts .container .contactList .link:visited{
+    color: white;
+}
+
+.contacts .container .contactList .link:hover{
+    transform: scale(1.25);
+}
+
+.contacts .container .contactList .link .icon{
+    font-size: 60px;
+}

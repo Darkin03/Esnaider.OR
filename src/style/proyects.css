@@ -73,25 +73,3 @@
 
 
 
-.finPagina{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.finPagina img{
-    animation-name: flotando;
-    animation-duration: 3s;
-    animation-delay: 2s;
-    animation-iteration-count: infinite;
-}
-
-@keyframes led {
-    50%{
-        text-shadow: 2px 2px #68e1fd;
-       
-    }
-}
-
-
