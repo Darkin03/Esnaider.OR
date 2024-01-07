@@ -15,7 +15,7 @@ export const Contacts = () => {
   return (
     <section  className="contacts" onMouseOver={onMouseOver} onMouseOut={onMouseOut}>
        <div className="pintureContainer">
-          <img src={webDeveloper} alt="webDeveloper" />
+          <img  className="pinture" src={webDeveloper} alt="webDeveloper" />
        </div>
 
        <div className="container">
@@ -25,15 +25,15 @@ export const Contacts = () => {
           </div>
           
           <div className="contactList">
-            <a className="link" href="https://www.linkedin.com/in/esnaideror/">
+            <a className="link" target="_blank" href="https://www.linkedin.com/in/esnaideror/">
               <CiLinkedin className="icon"/>
             </a>
             
-            <a className="link" href="">
+            <a className="link" target="_blank" href="https://www.instagram.com/esnaider.or/">
               <CiInstagram className="icon"/>
             </a>
 
-            <a className="link" href="">
+            <a className="link" target="_blank" href="https://twitter.com/SnaiderOrtega10">
               <CiTwitter className="icon"/>
             </a>
             

@@ -40,15 +40,15 @@ const Into = () => {
 
       <div className="navLink">
           
-          <a className="link"  href="https://www.linkedin.com/in/esnaideror/">
+          <a className="link" target="_blank"  href="https://www.linkedin.com/in/esnaideror/">
           <CiLinkedin />
           </a>
           
-          <a className="link" href="https://github.com/Darkin03">
+          <a className="link" target="_blank" href="https://github.com/Darkin03">
           <CiServer />
           </a>
 
-          <a className="link" href="https://github.com/Darkin03/Esnaider.OR">
+          <a className="link" target="_blank" href="https://github.com/Darkin03/Esnaider.OR">
           <FaGithub />
           </a>
          

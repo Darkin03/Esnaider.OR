@@ -20,7 +20,7 @@ export const Prcontenedor = () =>{
             <div className="titleContainer">
                 <h1  className={active? 'activeTitle':'title'}>Proyectos</h1>
                 <CiLaptop 
-                    className={active? 'activeIcon':'icon'}
+                    id="icon" className={active? 'activeIcon':'icon'}
                 />
             </div>
 

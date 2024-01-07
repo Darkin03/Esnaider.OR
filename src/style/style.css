@@ -35,6 +35,9 @@ body{
 .titleContainer #icon{
     font-size: 1.7em;
     color: #E5EAEF;
+    transition: 0.5s;
+
+
 }
 
 
@@ -68,6 +71,7 @@ body{
     top: 80vh;
     left: 3vw;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .up #icon{
@@ -89,6 +93,7 @@ body{
 .up:hover{
     background-color: black;
     color: #68e1fd;
+    transform: scale(1.25);
 }
 
 @keyframes fly {

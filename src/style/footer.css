@@ -38,3 +38,11 @@
     color:#68e1fd
 }
 
+
+
+@media screen and (max-width: 500px) {
+    .footer .logo{
+        font-size: 25px; 
+    }
+    
+}
