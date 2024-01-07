@@ -25,7 +25,9 @@ const Into = () => {
 
 
       <div className="into">
-        <img className="pinture" src={webDeveloper} />
+        <div className="pintureContainer">
+          <img className="pinture" src={webDeveloper} />
+        </div>
         <div className="text">
           <p className="hello">Hola! soy <span>Esnaider</span></p>
           <p className="rol">Frontend - Developer</p>
@@ -78,7 +80,7 @@ const Description = () => {
   return (
     <div  className="container" onMouseOver={mouseOver} onMouseOut={mouseOut}>
       <div className="titleContainer">
-        <h1 className={active ? "activeTitle" : ""}>Sobre Mi</h1>
+        <h1 className={active ? "activeTitle" : "title"}>Sobre Mi</h1>
         <CiUser id="icon" className={ active ? "activeIcon" : "inactiveIcon"}/>
       </div>
 
@@ -87,6 +89,9 @@ const Description = () => {
         y me apasiona ser autodidacta para perfeccionar constantemente mis habilidades como desarrollador.
          Busco destacarme en el dinámico mundo del desarrollo web,
           siempre en busca de oportunidades para aplicar mis conocimientos y trabajar de la mejor manera.
+          <br></br>
+        Actualmente estoy en el ultimo año de la carrera de Ingenieria de Sistemas 
+        en la Universidad del sinu (Monteria - Colombia).
       </p>
     </div>
   );
@@ -131,7 +136,7 @@ const Jobs = () => {
   return (
     <div  className="container" onMouseOver={mouseOver} onMouseOut={mouseOut}>
       <div className="titleContainer">
-        <h1 className={active ? "activeTitle" : ""}>Experiencia</h1>
+        <h1 className={active ? "activeTitle" : "title"}>Experiencia</h1>
         <CiTimer id="icon" className={ active ? "activeIcon" : "inactiveIcon"}/>
       </div>
 
@@ -228,7 +233,7 @@ const Hobbies = () => {
   return (
     <div  className="container" onMouseOver={mouseOver} onMouseOut={mouseOut}>
       <div className="titleContainer">
-        <h1 className={active ? "activeTitle" : ""}>Pasatiempos</h1>
+        <h1 className={active ? "activeTitle" : "title"}>Pasatiempos</h1>
         <CiPizza id="icon" className={ active ? "activeIcon" : "inactiveIcon"}/>
       </div>
 
@@ -240,7 +245,7 @@ const Hobbies = () => {
 
 export function AboutMe() {
   return (
-    <>
+    <section>
     <Into/>
       <div className="aboutMe">
         <div className="pintureContainer">
@@ -253,6 +258,6 @@ export function AboutMe() {
         </div>
       </div>
       
-       </>
+       </section>
   );
 }

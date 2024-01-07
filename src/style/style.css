@@ -29,18 +29,12 @@ body{
 }
 
 .container .titleContainer .title{
-    color: white;
+    color: #E5EAEF;
 }
-
-
-.container .titleContainer .activeTitle {
-    color: #68e1fd;
-}
-
-
 
 .titleContainer #icon{
-    font-size: 60px;
+    font-size: 1.7em;
+    color: #E5EAEF;
 }
 
 
@@ -52,5 +46,18 @@ body{
 .inactiveIcon{
     transition: 0.5s;
     scale: 1;
+}
+
+.container .titleContainer .activeTitle {
+    color: #68e1fd;
+}
+
+
+
+
+@keyframes fly {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 6px); }
+    100%   { transform: translate(0, -0px); } 
 }
 

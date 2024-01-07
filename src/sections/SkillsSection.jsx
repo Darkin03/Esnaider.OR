@@ -15,13 +15,18 @@ export const SkillsSection = () =>{
         
         <section className ="skills" onMouseOver={mouseOver} onMouseOut={mouseOut}>
             <div className="into">
-                <img className="pinture"  src={webDeveloper}/>
+
+                <div className="pintureContainer">
+                    <img className="pinture"  src={webDeveloper}/>
+                </div>
             
-                <div className="titleContainer">
-                    <div className="title">
-                        <h1 className={active ? "activeTitle" : ""}>Habilidades</h1>    
+                <div className="container">
+                
+                    <div className="titleContainer">
+                        <h1 className={active ? "activeTitle" : "title"}>Habilidades</h1>    
                         <CiStar id="icon" className={ active ? "activeIcon" : "inactiveIcon"}/>
                     </div>    
+                
                 </div>
             </div>
             

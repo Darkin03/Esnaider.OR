@@ -62,10 +62,8 @@
 }
 
 
-@keyframes fly {
-    0% { transform: translate(0,  0px); }
-    50%  { transform: translate(0, 6px); }
-    100%   { transform: translate(0, -0px); } 
+.intoAbout .into .pintureContainer{
+    flex: 0 5 406px;
 }
 
 
@@ -73,7 +71,7 @@
     animation-name: fly;
     animation-duration: 3s;
     animation-iteration-count: infinite;
-    flex: 0 0 200px;
+    width: 100%;
 }
 
 .intoAbout .navLink{
@@ -110,31 +108,18 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
-
 }
-
-@keyframes flotando {
-    0% { transform: translate(0,  0px); }
-    50%  { transform: translate(0, 6px); }
-    100%   { transform: translate(0, -0px); } 
-}
-
-
 
 .aboutMe .pintureContainer {
-    flex: 0 0 406x;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    flex: 0 5 406px;
 }
 
-.aboutMe .pintureContainer .pinture{
-    animation-name: flotando;
-    animation-duration: 3s;
-    animation-delay: 5s;
-    animation-iteration-count: infinite;
+.aboutMe .pintureContainer .pinture {
+    position: sticky;
+    width: 100%;
 }
+
+
 
 .aboutMe .infoContainer{
     font-family: 'Caveat', cursive;
@@ -165,6 +150,7 @@
 .hobbies .item .icon{
     transform: scale(1);
     transition: 500ms;
+    color: #E5EAEF;
 }
 
 .hobbies .item .iconActive{
@@ -187,6 +173,7 @@
     align-items: center;
     gap: 15px;
     flex-wrap: wrap-reverse;
+    color: #E5EAEF;
 }
 
 .jobs .job .titleCompany .icon{
