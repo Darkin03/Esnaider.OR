@@ -1,54 +1,46 @@
 import { useState } from "react";
-import { CiPhone } from "react-icons/ci";
-import { contactos } from "../data/contactos";
-import { ContactoCarta } from "../components/contactoCarta";
+import { CiInstagram, CiLinkedin, CiPhone, CiTwitter } from "react-icons/ci";
 import webDeveloper from "../images/Calling_Flatline.svg";
+import '../style/contacts.css'
 
-export const Contactos = () => {
-  const [activo, setActivo] = useState(false);
-  const mouseEncima = () => {
-    setActivo(true);
+
+export const Contacts = () => {
+  const [active, setActive] = useState(false);
+  const onMouseOver  = () => {
+    setActive(true);
   };
-  const mouseNoEncima = () => {
-    setActivo(false);
+  const onMouseOut = () => {
+    setActive(false);
   };
   return (
-    <footer>
-      <div
-        className="finPagina"
-        onMouseOver={mouseEncima}
-        onMouseOut={mouseNoEncima}
-      >
-        <img src={webDeveloper} />
-        <div>
-          <div className="descripcionTl">
-            <h1
-              className={activo ? "tituloFragmentoActivo" : ""}
-              id="contactosTitulo"
-            >
-              Contactos
-            </h1>
-            <CiPhone
-              className={
-                activo ? "iconoFragmentoActivo" : "iconoFragmentoDesactivado"
-              }
-              id="iconoFragmento"
-            />
+    <section  className="contacts" onMouseOver={onMouseOver} onMouseOut={onMouseOut}>
+       <div className="pintureContainer">
+          <img  className="pinture" src={webDeveloper} alt="webDeveloper" />
+       </div>
+
+       <div className="container">
+          <div className="titleContainer">
+            <h1 className={active ? "activeTitle" : "title"}>Contactos</h1>
+            <CiPhone id="icon" className={ active ? "activeIcon" : "inactiveIcon"}/>
           </div>
-          <p className="contactosDespedida">Nos vemos pronto! </p>
-          <div className="contactosContenedor">
-            {contactos.map((contacto) => (
-              <ContactoCarta
-                key={contacto.id}
-                icono={contacto.icono}
-                link={contacto.link}
-              ></ContactoCarta>
-            ))}
+          
+          <div className="contactList">
+            <a className="link" target="_blank" href="https://www.linkedin.com/in/esnaideror/">
+              <CiLinkedin className="icon"/>
+            </a>
+            
+            <a className="link" target="_blank" href="https://www.instagram.com/esnaider.or/">
+              <CiInstagram className="icon"/>
+            </a>
+
+            <a className="link" target="_blank" href="https://twitter.com/SnaiderOrtega10">
+              <CiTwitter className="icon"/>
+            </a>
+            
           </div>
-        </div>
-      </div>
-      
-      
-    </footer>
+
+
+       </div>
+    </section>
   );
 };

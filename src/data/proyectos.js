@@ -1,17 +1,18 @@
-//array con objetos de los proyectos que he realizaco hasta el momento
-export const proyectos = [
+// data/proyectos.js
+export const proyects = [
     {   
         'id':1,
-        'icono':'fa-solid fa-laptop-code',
-        'nombre':'Portafolio',
-        'descripcion':'Portafolio donde esta toda la informacion de mi',
-        'link':''
+        'pinture':'Portflolio.jpeg',
+        'name':'Portafolio',
+        'description':'Portafolio donde está toda la información de mi',
+        'link':'https://github.com/Darkin03/Esnaider.OR'
     },
-
-    {   'id':2,
-        'icono':'fa-solid fa-laptop-code',
-        'nombre':'MusicTic',
-        'descripcion':'Aplicacion De musica',
-        'link':'https://github.com/snaider10/MusicTic.git'
+    {   
+        'id':2,
+        'pinture':'Wikiwatch.jpeg',
+        'name':'WikiWatch',
+        'description':'WikiPedia de peliculas y series',
+        'link':'https://code-world-co.github.io/WikiWatch/'
     }
-];
+  ];
+  

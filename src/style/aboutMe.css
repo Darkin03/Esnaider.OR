@@ -1,0 +1,196 @@
+.intoAbout{
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 5px
+}
+
+.intoAbout .into{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 20px;
+    justify-content:center;
+    align-items: center;
+    
+}
+
+.intoAbout .into .text{
+    flex: 0.7 0 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 30px
+}
+
+.intoAbout .into .text .hello{
+    text-align: center;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 2em;
+}
+
+.intoAbout .into .text .hello span{
+    font-family:  permanent marker;
+    font-size: 1.2em;
+}
+
+.intoAbout .into .text .rol {
+    text-align: center;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 1.2em;
+}
+
+.intoAbout .into .text .welcome{
+    text-align: center;
+    font-family: 'Shadows Into Light', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+@keyframes heartAnimation {
+    50%{transform: scale(1.25);}
+}
+
+
+.intoAbout .into .text .welcome .heart{
+    animation-name: heartAnimation;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    font-size: 45px;
+}
+
+
+.intoAbout .into .pintureContainer{
+    flex: 0 5 406px;
+}
+
+
+.intoAbout .into .pinture {
+    animation-name: fly;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    width: 100%;
+}
+
+.intoAbout .navLink{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.intoAbout .navLink .link{
+    color: black;
+    text-decoration: none;
+    font-size: 60px;
+}
+
+.intoAbout .navLink .link:hover{
+    position: relative;
+    bottom: 5px;
+}
+
+.intoAbout .navLink .link:visited{
+    color: black;
+}
+
+
+
+.wapeContainer{
+    background-color: black;
+}
+
+.aboutMe{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.aboutMe .pintureContainer {
+    flex: 0 5 406px;
+}
+
+.aboutMe .pintureContainer .pinture {
+    position: sticky;
+    width: 100%;
+}
+
+
+
+.aboutMe .infoContainer{
+    font-family: 'Caveat', cursive;
+    font-size: 30px;
+    flex: 0.7 0 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+
+
+
+
+.hobbies{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hobbies .item{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.hobbies .item .icon{
+    transform: scale(1);
+    transition: 500ms;
+    color: #E5EAEF;
+}
+
+.hobbies .item .iconActive{
+    transform: scale(1.25);
+    transition: 500ms;
+    color: #68e1fd;
+}
+
+.jobs {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.jobs .job .titleCompany{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap-reverse;
+    color: #E5EAEF;
+}
+
+.jobs .job .titleCompany .icon{
+    transform: scale(1);
+    transition: 500ms;
+}
+
+
+.jobs .job .titleCompany .iconActive{
+    transform: scale(1.25);
+    transition: 500ms;
+    color: #68e1fd;
+}
+
+
+.jobs .job .titleDates{
+    display: flex;
+    justify-content: space-between;
+}
+

@@ -1,0 +1,48 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+@keyframes crazyAnimation {
+    from{
+        width: 80%;
+        border: 1px solid #68e1fd;
+    } to {
+        width: 20%;
+        border: 1px solid white;
+    }
+}
+
+.footer .separation hr{
+    border: 1px solid white;
+    width: 80%;
+    margin: auto;
+    animation-name: crazyAnimation;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.footer .logo{
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+    font-size: 30px; 
+    padding: 10px;
+    color:  #E5EAEF;
+
+}
+
+.footer .logo span{
+    color:#68e1fd
+}
+
+
+
+@media screen and (max-width: 500px) {
+    .footer .logo{
+        font-size: 25px; 
+    }
+    
+}

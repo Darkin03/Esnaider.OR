@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Permanent+Marker&family=Shadows+Into+Light&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    color: #A6A6A6;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px;
+}
+
+.container .titleContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.container .titleContainer .title{
+    color: #E5EAEF;
+}
+
+.titleContainer #icon{
+    font-size: 1.7em;
+    color: #E5EAEF;
+    transition: 0.5s;
+
+
+}
+
+
+.activeIcon{
+    transition: 0.5s;
+    scale: 1.25;
+}
+
+.inactiveIcon{
+    transition: 0.5s;
+    scale: 1;
+}
+
+.container .titleContainer .activeTitle {
+    color: #68e1fd;
+}
+
+.inactiveUp{
+    display: none;
+}
+
+.up{
+    border-radius: 100%;
+    background-color: #68e1fd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:min-content;
+    padding: 5px;
+    position: fixed;
+    top: 80vh;
+    left: 3vw;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.up #icon{
+    font-size: 2.3em;
+    font-weight: 700; 
+    color: #E5EAEF;
+}
+
+.up .activeIcon{
+    transform: scale(1.25);
+    transition: 0.5s;
+}
+
+.up .icon{
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+.up:hover{
+    background-color: black;
+    color: #68e1fd;
+    transform: scale(1.25);
+}
+
+@keyframes fly {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 6px); }
+    100%   { transform: translate(0, -0px); } 
+}
+

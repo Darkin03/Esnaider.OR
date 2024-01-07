@@ -1,0 +1,61 @@
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 40px;
+}
+
+.skills .into{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skills .into .pintureContainer{
+    flex: 0 5 406px;
+}
+.skills .into .pintureContainer .pinture{
+    animation-name: fly;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    width: 100%;
+}
+
+.skills .into .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.skillsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.skillsContainer .skill{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Caveat', cursive;
+    font-size: 25px;
+}
+
+.skillsContainer .skill #icon{
+    font-size: 50px;
+    transition: 0.5s;
+}
+
+.skillsContainer .skill .activeIcon{
+    color: #68e1fd;
+    transform: scale(1.01);    
+}
+
+.skillsConainer .skill .ActiveText{
+    color:#68e1fd;
+}
