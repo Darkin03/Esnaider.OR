@@ -7,9 +7,13 @@ import { Header} from "./components/Header";
 import {  Route, Routes } from "react-router-dom";
 import { Footer } from "./components/footer";
 import "./style/style.css";
+import { Up } from "./components/Up";
 
 
 function App() {
+
+
+
   return (
     <>
       
@@ -27,6 +31,7 @@ function App() {
 
       <Footer/>
      
+      <Up/>
     </>
   );
 }

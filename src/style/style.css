@@ -52,8 +52,44 @@ body{
     color: #68e1fd;
 }
 
+.inactiveUp{
+    display: none;
+}
 
+.up{
+    border-radius: 100%;
+    background-color: #68e1fd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:min-content;
+    padding: 5px;
+    position: fixed;
+    top: 80vh;
+    left: 3vw;
+    transition: 0.5s;
+}
 
+.up #icon{
+    font-size: 2.3em;
+    font-weight: 700; 
+    color: #E5EAEF;
+}
+
+.up .activeIcon{
+    transform: scale(1.25);
+    transition: 0.5s;
+}
+
+.up .icon{
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+.up:hover{
+    background-color: black;
+    color: #68e1fd;
+}
 
 @keyframes fly {
     0% { transform: translate(0,  0px); }
