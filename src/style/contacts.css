@@ -3,16 +3,17 @@
     justify-content: center;
     gap: 20px;
     font-size: 35px;
+    flex-wrap: wrap-reverse;
 }
 
 .contacts .pintureContainer{
-    flex: 0 1 406px;
+    flex: 0 5 406px;
     display: flex;
     align-items: center;
 }
 
 .contacts .pintureContainer .pinture{
-    width: 406px;
+    width: 100%;
 }
 
 .contacts .container{
@@ -25,7 +26,6 @@
 }
 
 .contacts .contactsContainer{
-    flex: 0 1 406px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -45,7 +45,7 @@
 }
 
 .contacts .container .contactList .link:visited{
-    color: white;
+    color: #A6A6A6;
 }
 
 .contacts .container .contactList .link:hover{

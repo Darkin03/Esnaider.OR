@@ -20,7 +20,7 @@ export const Contacts = () => {
 
        <div className="container">
           <div className="titleContainer">
-            <h1 className={active ? "activeTitle" : ""}>Contactos</h1>
+            <h1 className={active ? "activeTitle" : "title"}>Contactos</h1>
             <CiPhone id="icon" className={ active ? "activeIcon" : "inactiveIcon"}/>
           </div>
           

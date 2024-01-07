@@ -16,14 +16,19 @@
 .skills .into .pintureContainer{
     flex: 0 5 406px;
 }
-.skills .into  .pinture{
+.skills .into .pintureContainer .pinture{
     animation-name: fly;
     animation-duration: 3s;
     animation-iteration-count: infinite;
     width: 100%;
 }
 
-
+.skills .into .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
 
 
 .skillsContainer{
@@ -41,17 +46,14 @@
     font-size: 25px;
 }
 
-.skillsContainer .skill .icon{
-    color: white;
-    font-size: 60px;
+.skillsContainer .skill #icon{
+    font-size: 50px;
     transition: 0.5s;
 }
 
 .skillsContainer .skill .activeIcon{
-    font-size: 60px;
     color: #68e1fd;
-    transform: scale(1.01);
-    transition: 0.5s;    
+    transform: scale(1.01);    
 }
 
 .skillsConainer .skill .ActiveText{
