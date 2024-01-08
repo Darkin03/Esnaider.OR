@@ -21,7 +21,7 @@ function App() {
 
       <section >
         <Routes>
-          <Route path="/"element={<AboutMe />} />
+          <Route path="/Esnaider.OR/"element={<AboutMe />} />
           <Route path="/habilidades" element={<SkillsSection />} />
           <Route path="/proyectos" element={<Prcontenedor />} />
           <Route path="/contactos" element={<Contacts />} />
