@@ -44,7 +44,7 @@
     transition: 500ms;
 }
 
-.contacts .container .contactList .link:visited{
+.contacts .container .contactList .link:active{
     color: #A6A6A6;
 }
 
