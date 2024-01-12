@@ -5,7 +5,7 @@ import { Prcontenedor } from "./sections/PrContenedor";
 import { Contacts } from "./sections/Contactos";
 import { Header} from "./components/Header";
 import {  Route, Routes } from "react-router-dom";
-import { Footer } from "./components/footer";
+import { Footer } from "./components/Footer"; 
 import "./style/style.css";
 import { Up } from "./components/Up";
 
@@ -21,7 +21,7 @@ function App() {
 
       <section >
         <Routes>
-          <Route path="/" element={<AboutMe />} />
+          <Route path="/Esnaider.OR/"element={<AboutMe />} />
           <Route path="/habilidades" element={<SkillsSection />} />
           <Route path="/proyectos" element={<Prcontenedor />} />
           <Route path="/contactos" element={<Contacts />} />
