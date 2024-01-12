@@ -1,5 +1,5 @@
 import Portflolio from '../images/Proyects/Portflolio.jpeg'
-import WikiWatch from '../images/Proyects/WikiWatch.jpeg'
+import WikiWatch from '../images/Proyects/Wikiwatch.jpeg'
 
 export function ProyectsList(){
     return(
