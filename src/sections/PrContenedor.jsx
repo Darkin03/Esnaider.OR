@@ -1,8 +1,7 @@
 import { useState } from "react"
-import { proyects } from "../data/proyectos"
-import { ProyectoCarta } from "../components/ProyectoCarta";
 import { CiLaptop} from "react-icons/ci";
 import '../style/proyects.css'
+import { ProyectsList } from "../components/ProyectsList";
 
 export const Prcontenedor = () =>{
 
@@ -24,19 +23,7 @@ export const Prcontenedor = () =>{
                 />
             </div>
 
-            <div className="proyects">
-                {
-                proyects.map((proyect)=>(
-                    <ProyectoCarta
-                        key={proyect.id}
-                        pinture={proyect.pinture}
-                        name={proyect.name}
-                        description={proyect.description}
-                        link={proyect.link}
-                     ></ProyectoCarta>
-                             ))
-                }
-            </div>
+            <ProyectsList/>
            
 
         </section>

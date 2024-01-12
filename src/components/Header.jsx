@@ -38,7 +38,7 @@ export function Header() {
         </div>
 
         <Link
-          to="/"
+          to="/Esnaider.OR/"
           className="link"
           onMouseOver={() => handleIconOver("user")}
           onMouseOut={() => handleIconOut("user")}
@@ -92,7 +92,7 @@ export function Header() {
                 </header>
                 <ul className="list">
                     <li className="item" >
-                      <Link to="/" className="link" onClick={handleClick}>
+                      <Link to="/Esnaider.OR/" className="link" onClick={handleClick}>
                         <CiUser className="icon" /> Sobre mi
                       </Link>
                     </li>
