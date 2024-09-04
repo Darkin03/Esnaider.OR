@@ -70,16 +70,6 @@ header {
   }
 
 
-#iconActive {
-    transition: 0.5s;
-    transform: scale(3);
-  }
-  
-  .nav .link .iconInactive {
-    transition: 0.5s;
-    transform: scale(1);
-  }
-  
 
   
   #headerAside {
@@ -121,7 +111,6 @@ header {
     animation-duration: 500ms;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
-    box-shadow: 0px 0px 30px 0px #68e1fd;
   }
   
   .activeAside .content .header {
@@ -150,37 +139,29 @@ header {
   .activeAside .content .list {
     list-style: none;
     padding: 0;
+    
   }
   
   .activeAside .content .list .item {
-    padding: 10px;
     transition: 500ms;
     color: black;
   }
   
-  .activeAside .content .list .link {
+  .activeAside .content .list .item .link {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 50px;
     text-decoration: none;
-    color: inherit;
   }
-  
-  .activeAside .content .list .link .icon {
+
+  .activeAside .content .list .item .link .content{
     display: flex;
-    justify-content: center;
     align-items: center;
+    gap: 5px;
+    text-decoration: none;
   }
   
-  .activeAside .content .list .link:active {
-    color: inherit;
-  }
   
-  .activeAside .content .list .item:hover {
-    background-color: #68e1fd;
-    border-radius: 5px;
-    color: white;
-  }
   
   .activeAside .content .pintureContainer {
     align-self: flex-end;
