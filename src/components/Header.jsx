@@ -4,30 +4,16 @@ import "../style/header.css";
 import { CiPhone, CiLaptop, CiMedal, CiUser } from "react-icons/ci";
 import { FaBars } from "react-icons/fa";
 import webDeveloper from "../images/Web Developer_Flatline.svg";
+import { LinkApp } from "./Enlace";
 
 
 export function Header() {
-  const [iconState, setIconState] = useState({
-    user: false,
-    medal: false,
-    laptop: false,
-    phone: false,
-  });
 
-  const handleIconOver = (icon) => {
-    setIconState((prev) => ({ ...prev, [icon]: true }));
-  };
+  const [activeAside,setActiveAside] = useState(false)
 
-  const handleIconOut = (icon) => {
-    setIconState((prev) => ({ ...prev, [icon]: false }));
-  };
-
-  const [activeAside, setActiveAside] = useState(false);
-
-  const handleClick = useCallback(() => {
-    setActiveAside(!activeAside);
-  }, [activeAside]);
-  
+  const handleClick = useCallback(()=>{
+    setActiveAside(!activeAside)
+  },[activeAside])
 
   return (
     <section>
@@ -37,41 +23,21 @@ export function Header() {
           <h3>Esnaider.<span>OR</span></h3>
         </div>
 
-        <Link
-          to="/Esnaider.OR/"
-          className="link"
-          onMouseOver={() => handleIconOver("user")}
-          onMouseOut={() => handleIconOut("user")}
-        >
-          <CiUser className={iconState.user ? "iconActive" : "iconInactive"} /> SobreMi
-        </Link>
+        <LinkApp link="/Esnaider.OR/">
+          <CiUser/> SobreMi
+        </LinkApp>
 
-        <Link
-          to="/habilidades"
-          className="link"
-          onMouseOver={() => handleIconOver("medal")}
-          onMouseOut={() => handleIconOut("medal")}
-        >
-          <CiMedal className={iconState.medal ? "iconActive" : "iconInactive"} /> Habilidades
-        </Link>
+        <LinkApp link="/habilidades">
+          <CiMedal/> Habilidades
+        </LinkApp>
 
-        <Link
-          to="/proyectos"
-          className="link"
-          onMouseOver={() => handleIconOver("laptop")}
-          onMouseOut={() => handleIconOut("laptop")}
-        >
-          <CiLaptop className={iconState.laptop ? "iconActive" : "iconInactive"} /> Proyectos
-        </Link>
+        <LinkApp link="/proyectos">
+          <CiLaptop/> Proyectos
+        </LinkApp>
 
-        <Link
-          to="/contactos"
-          className="link"
-          onMouseOver={() => handleIconOver("phone")}
-          onMouseOut={() => handleIconOut("phone")}
-        >
-          <CiPhone className={iconState.phone ? "iconActive" : "iconInactive"} /> Contactos
-        </Link>
+        <LinkApp Link="/contactos">
+          <CiPhone/> Contactos
+        </LinkApp>
 
         <button className="button" onClick={handleClick}>
           <FaBars className="icon" />
