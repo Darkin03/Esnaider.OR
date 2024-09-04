@@ -19,7 +19,7 @@ export function Header() {
   useEffect(() => {
     const updateWindowSize = () => {
       const width = window.innerWidth;
-      setIsAsideVisible(width < 720);
+      setIsAsideVisible(width < 760);
     };
 
     window.addEventListener('resize', updateWindowSize);

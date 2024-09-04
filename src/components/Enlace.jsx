@@ -23,50 +23,10 @@ export function LinkApp({link,children}){
 
     return(
         <Link className="link" to={link} onMouseOver={() => handleIconOver()} onMouseOut={() => handleIconOut()}>
-            <div className={active ? "iconActive" : "iconInactive"}>
-                {children}
+            <div className ="content">
+                   {children }
             </div>
         </Link>
     )
 }
 
-/*
-
-  const [iconState, setIconState] = useState({
-    user: false,
-    medal: false,
-    laptop: false,
-    phone: false,
-  });
-
-  const handleIconOver = (icon) => {
-    setIconState((prev) => ({ ...prev, [icon]: true }));
-  };
-
-  const handleIconOut = (icon) => {
-    setIconState((prev) => ({ ...prev, [icon]: false }));
-  };
-
-  const [activeAside, setActiveAside] = useState(false);
-
-  const handleClick = useCallback(() => {
-    setActiveAside(!activeAside);
-  }, [activeAside]);
-  
-
-
-
-     <Link
-          to="/Esnaider.OR/"
-          className="link"
-          onMouseOver={() => handleIconOver("user")}
-          onMouseOut={() => handleIconOut("user")}
-        >
-          <CiUser className={iconState.user ? "iconActive" : "iconInactive"} /> SobreMi
-        </Link>
-
-
-
-
-
-*/
