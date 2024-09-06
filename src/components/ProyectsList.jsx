@@ -21,7 +21,7 @@ export function ProyectsList(){
                 </div>
 
                 <div className="content">
-                    <h3 className="title">Portflolio</h3>
+                    <h3 className="title">WikiWatch</h3>
                     <p className="description">WikiPedia de peliculas y series</p>
                 </div>
                 </a>
