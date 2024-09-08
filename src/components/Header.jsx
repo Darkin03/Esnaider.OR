@@ -102,9 +102,9 @@ function Aside(){
             </li>
 
             <li className="item" onClick={handleClick}>
-               <LinkApp link="/habilidades">
-                 <CiMedal/> Habilidades
-               </LinkApp>
+              <LinkApp link="/habilidades">
+                <CiMedal/> Habilidades
+              </LinkApp>
             </li>
 
             <li className="item" onClick={handleClick}>
