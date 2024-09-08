@@ -15,7 +15,7 @@ function App() {
 
 
   return (
-    <>
+    <section className="app">
       
       <Header/>
 
@@ -32,7 +32,7 @@ function App() {
       <Footer/>
      
       <Up/>
-    </>
+    </section>
   );
 }
 

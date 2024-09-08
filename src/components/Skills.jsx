@@ -65,3 +65,12 @@ export function Skills() {
     );
 }
 
+
+export function SkillsHuman (){
+    return (
+        <section>
+            This is fine !
+        </section>
+    )
+}
+
