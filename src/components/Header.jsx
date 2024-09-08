@@ -1,9 +1,14 @@
 import { createContext, useContext, useEffect,  useState } from "react";
 import "../style/header.css";
-import { CiPhone, CiLaptop, CiMedal, CiUser } from "react-icons/ci";
+import { CiPhone, CiLaptop, CiMedal, CiUser} from "react-icons/ci";
 import { FaBars } from "react-icons/fa";
 import webDeveloper from "../images/Web Developer_Flatline.svg";
-import { LinkApp } from "./Enlace";
+import { LinkApp, NavLink } from "./Enlace";
+import {
+  CiLinkedin,
+  CiServer,
+} from "react-icons/ci";
+import { FaGithub } from "react-icons/fa";
 
 
 const UserAside = createContext(null)
@@ -68,9 +73,9 @@ export function Header() {
           <CiLaptop/> Proyectos
         </LinkApp>
 
-        <LinkApp Link="/contactos">
-          <CiPhone/> Contactos
-        </LinkApp>
+        <LinkApp link="/contactos"  >
+                <CiPhone  /> Contactos
+              </LinkApp>
       </nav>
     </header>
     </section>
@@ -84,9 +89,6 @@ function Aside(){
   const c = useContext(UserAside)
   return(
     <aside id="headerAside" className= {activeAside? 'activeAside': 'inactiveAside'}>
-           
-           
-
     <section className="content">
         <header className="header">
             <button className="button" onClick={handleClick}>
@@ -124,7 +126,24 @@ function Aside(){
 
         <div className="pintureContainer">
           <img className="pinture" src={webDeveloper} />
+          <p className="rol">Frontend - Developer</p>
         </div>
+
+        <footer>
+          <NavLink fontsize={'50px'}>
+          <a className="link" target="_blank"  href="https://www.linkedin.com/in/esnaideror/">
+          <CiLinkedin />
+          </a>
+          
+          <a className="link" target="_blank" href="https://github.com/Darkin03">
+          <CiServer />
+          </a>
+
+          <a className="link" target="_blank" href="https://github.com/Darkin03/Esnaider.OR">
+          <FaGithub />
+          </a>
+          </NavLink>
+        </footer>
         
     </section>
    

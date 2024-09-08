@@ -30,3 +30,11 @@ export function LinkApp({link,children}){
     )
 }
 
+export function NavLink({fontsize,children}) {
+    return(
+        <nav className="nav" style={{fontSize: fontsize}}>
+            {children}
+        </nav>
+    )
+}
+
