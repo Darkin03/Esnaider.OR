@@ -11,18 +11,8 @@ export const Enlace = (props) => {
 }
 
 export function LinkApp({link,children}){
-
-    const [active,setActive] = useState(false)
-    const handleIconOver = () => {
-        setActive(true);
-      };
-    
-      const handleIconOut = () => {
-        setActive(false);
-      };
-
     return(
-        <Link className="link" to={link} onMouseOver={() => handleIconOver()} onMouseOut={() => handleIconOut()}>
+        <Link className="link" to={link}>
             <div className ="content">
                    {children }
             </div>
@@ -30,11 +20,24 @@ export function LinkApp({link,children}){
     )
 }
 
+export function NavWeb({link,children}){
+    return(
+        <a className="link"  target="_blank"  href={link}>
+            <div className="content">
+                {children}
+            </div>
+        </a>
+    )
+}
+
+
 export function NavLink({fontsize,children}) {
     return(
-        <nav className="nav" style={{fontSize: fontsize}}>
-            {children}
-        </nav>
+        <div style={{fontSize: fontsize}}>
+            <nav className="nav">
+                {children}
+            </nav>
+        </div>
     )
 }
 
