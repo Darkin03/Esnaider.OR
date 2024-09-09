@@ -99,7 +99,7 @@ transition: 500ms;
 }
 
 .active .item .icon{
-    transform: scale(1.7);
+    transform: scale(1.25);
     transition: 500ms;
     color: #68e1fd;
 }

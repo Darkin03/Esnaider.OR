@@ -19,7 +19,9 @@ export const SectionContent = ({img, title, text, icon, children}) => {
                     )}
                     <div className="titleContainer">
                         <h1 className='title'>{title}</h1>
+                        
                         {icon}
+                        
                     </div>
                 </div>
                 <p>{text}</p>
