@@ -1,7 +1,13 @@
 import webDeveloper from "../images/Data Arranging_Flatline.svg";
 import { CiStar} from "react-icons/ci";
-import { useState} from "react";
-import { Skills } from "../components/Skills";
+import { SectionContent,Item } from "../components/utils";
+import { FaHtml5, FaCss3Alt, FaReact, FaBootstrap, FaNodeJs, FaPhp, FaGit } from "react-icons/fa";
+import { SiJavascript, SiTypescript, SiNextdotjs, SiMysql } from "react-icons/si";
+import { IconContext } from "react-icons";
+import "../style/skills.css";
+
+
+/*
 export const SkillsSection = () =>{
     const [active, setActive] = useState(false);
     const mouseOver = () => {
@@ -32,5 +38,56 @@ export const SkillsSection = () =>{
             
             <Skills/>
         </section>
+    )
+}
+    */
+
+export function SkillsSection(){
+    return(
+        <SectionContent
+        
+            img={webDeveloper}
+            title="Habilidades"
+            icon={<CiStar className="icon" />}
+
+        >
+            <section className="skillsContainer">
+            <IconContext.Provider value={{ className: "icon" }}>
+                <Item icon={<FaHtml5 />}>
+                    Dibujar 
+                </Item>
+                <Item icon={<FaCss3Alt />}>
+                    Dibujar 
+                </Item>
+                <Item icon={<FaReact />}>
+                    Dibujar 
+                </Item>
+                <Item icon={<FaBootstrap />}>
+                    Dibujar 
+                </Item>
+                <Item icon={<FaNodeJs />}>
+                    Dibujar 
+                </Item>
+                <Item icon={<FaPhp />}>
+                    Dibujar 
+                </Item>
+                <Item icon={<FaGit />}>
+                    Dibujar 
+                </Item>
+                <Item icon={<SiJavascript />}>
+                    Dibujar 
+                </Item>
+                <Item icon={<SiTypescript />}>
+                    Dibujar 
+                </Item>
+                <Item icon={<SiNextdotjs />}>
+                    Dibujar 
+                </Item>
+                <Item icon={<SiMysql />}>
+                    Dibujar 
+                </Item>
+            </IconContext.Provider>
+        </section>
+        </SectionContent>
     )
 }

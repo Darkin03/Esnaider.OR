@@ -18,7 +18,7 @@ import { FaGithub } from "react-icons/fa";
 import {  useState ,useEffect} from "react";
 import { MdWorkOutline,MdTaskAlt} from "react-icons/md";
 import { CgGym } from "react-icons/cg";
-
+import { SectionContent,Item } from "../components/utils";
 const Into = () => {
   return (
     <section className="intoAbout">
@@ -64,25 +64,6 @@ const Into = () => {
   );
 }
 
-const SectionContent = ({title,text,icon,children})=>{
-  const [active, setActive] = useState(false);
-  const mouseOver = () => {
-    setActive(true);
-  };
-  const mouseOut = () => {
-    setActive(false);
-  };
-  return(
-    <div className="container" onMouseOver={mouseOver} onMouseOut={mouseOut}>
-      <div className="titleContainer">
-        <h1 className={active ? "activeTitle" : "title"}>{title}</h1>
-        {icon}
-      </div>
-      <p>{text}</p>
-      {children}
-    </div>
-  )
-}
 
 const Description = () => {
   return (
@@ -96,22 +77,7 @@ const Description = () => {
   );
 }
 
-const Item = ({icon,children})=>{
-  const [active,setActive] = useState(false);
-  const handleMouseOver = ()=>{
-    setActive(true);
-  }
-  const handleMouseOut = ()=>{
-    setActive(false);
-  }
-  return(
-    <div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} className= {active? 'active':''}>
-      <div className="item">
-        {icon}{children}
-      </div>
-    </div>
-  )
-}
+
 
 const Hobbies = () => {
   return (
