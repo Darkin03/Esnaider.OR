@@ -119,8 +119,6 @@
     width: 100%;
 }
 
-
-
 .aboutMe .infoContainer{
     font-family: 'Caveat', cursive;
     font-size: 30px;
@@ -130,67 +128,90 @@
     gap: 40px;
 }
 
-
-
-
-
 .hobbies{
-    list-style: none;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.hobbies .item{
+.item{
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
-.hobbies .item .icon{
-    transform: scale(1);
+.item .icon{
+    transform: scale(1.45);
     transition: 500ms;
     color: #E5EAEF;
 }
 
-.hobbies .item .iconActive{
+.active .item .icon{
     transform: scale(1.25);
     transition: 500ms;
     color: #68e1fd;
 }
+
+
+.joblist{
+    list-style: none;
+}
+
 
 .jobs {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
     padding: 10px;
     margin-top: 20px;
 }
 
-.jobs .job .titleCompany{
+.job{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.job .titleCompany{
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 15px;
     flex-wrap: wrap-reverse;
     color: #E5EAEF;
 }
 
-.jobs .job .titleCompany .icon{
+.job .titleCompany .icon{
     transform: scale(1);
     transition: 500ms;
 }
 
 
-.jobs .job .titleCompany .iconActive{
+.job .titleCompany .iconActive{
     transform: scale(1.25);
     transition: 500ms;
     color: #68e1fd;
 }
 
 
-.jobs .job .titleDates{
+.job .rol{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    color: #cfd5db;
 }
 
+.job  .rol .name{
+    width: max-content;
+}
+
+.job .rol .titleDates{
+    flex: 0 0 max-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
