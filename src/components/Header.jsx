@@ -1,14 +1,14 @@
 import { createContext, useContext, useEffect,  useState } from "react";
-import "../style/header.css";
+import { LinkApp, NavLink, NavWeb } from "./LinksShorts";
 import { CiPhone, CiLaptop, CiMedal, CiUser} from "react-icons/ci";
 import { FaBars } from "react-icons/fa";
 import webDeveloper from "../images/Web Developer_Flatline.svg";
-import { LinkApp, NavLink, NavWeb } from "./Enlace";
 import {
   CiLinkedin,
   CiServer,
 } from "react-icons/ci";
 import { FaGithub } from "react-icons/fa";
+import "../style/header.css";
 
 
 const UserAside = createContext(null)

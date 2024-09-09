@@ -1,8 +1,9 @@
+import  useGetJobs  from "../hooks/jobs";
+import { NavLink, NavWeb } from "./LinksShorts";
+import { SectionContent,Item } from "./ComponentUtils";
 import data_file from "../images/Personal data _Flatline.svg";
 import webDeveloper from "../images/Web Developer_Flatline.svg";
 import "../style/aboutMe.css";
-import  useGetJobs  from "../hooks/jobs";
-import { NavLink, NavWeb } from "./Enlace";
 import {
   CiHeadphones,
   CiPen,
@@ -16,56 +17,10 @@ import {
 } from "react-icons/ci";
 import { FaGithub } from "react-icons/fa";
 import {  useState ,useEffect} from "react";
-import { MdWorkOutline,MdTaskAlt} from "react-icons/md";
+import { MdWorkOutline,MdTaskAlt,MdOutlinePets } from "react-icons/md";
 import { CgGym } from "react-icons/cg";
 
-export const SectionContent = ({img, title, text, icon, children}) => {
-    const [active, setActive] = useState(false);
-    const handleMouseOver = () => {
-        setActive(true);
-    };
-    const handleMouseOut = () => {
-        setActive(false);
-    };
-    return (
-        <div className="container" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
-            <div className={active ? "activeContent" : ""} id='content'>
-                <div className='into'>
-                    {img && (
-                        <div className='pintureContainer'>
-                            <img className="pinture" src={img} />
-                        </div>
-                    )}
-                    <div className="titleContainer">
-                        <h1 className='title'>{title}</h1>
-                        
-                        {icon}
-                        
-                    </div>
-                </div>
-                <p>{text}</p>
-                {children}
-            </div>
-        </div>
-    );
-}
-  
-  export const Item = ({icon,children})=>{
-    const [active,setActive] = useState(false);
-    const handleMouseOver = ()=>{
-      setActive(true);
-    }
-    const handleMouseOut = ()=>{
-      setActive(false);
-    }
-    return(
-      <div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} className= {active? 'active':''}>
-        <div className="item">
-          {icon}{children}
-        </div>
-      </div>
-    )
-  }
+
 const Into = () => {
   return (
     <section className="intoAbout">
@@ -147,7 +102,13 @@ const Hobbies = () => {
 
           <Item icon={<CgGym  className= "icon" />}>
             Ir al gym 
-          </Item>       
+          </Item>
+
+          <Item icon={<MdOutlinePets  className= "icon" />}>
+            Pasear a mi perro
+          </Item>
+          
+
         </div>
       </SectionContent>
 );
@@ -235,8 +196,6 @@ const Jobs = () => {
 
 
 export function AboutMe() {
-
-
   return (
     <section>
     <Into/>
