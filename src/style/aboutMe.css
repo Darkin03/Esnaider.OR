@@ -135,6 +135,7 @@
 }
 
 .item{
+    font-size: auto;
     display: flex;
     align-items: center;
     gap: 15px;

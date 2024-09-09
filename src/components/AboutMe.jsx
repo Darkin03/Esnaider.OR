@@ -18,7 +18,7 @@ import { FaGithub } from "react-icons/fa";
 import {  useState ,useEffect} from "react";
 import { MdWorkOutline,MdTaskAlt} from "react-icons/md";
 import { CgGym } from "react-icons/cg";
-
+import { SectionContent,Item } from "../components/utils";
 const Into = () => {
   return (
     <section className="intoAbout">
@@ -64,31 +64,12 @@ const Into = () => {
   );
 }
 
-const SectionContent = ({title,text,icon,children})=>{
-  const [active, setActive] = useState(false);
-  const mouseOver = () => {
-    setActive(true);
-  };
-  const mouseOut = () => {
-    setActive(false);
-  };
-  return(
-    <div className="container" onMouseOver={mouseOver} onMouseOut={mouseOut}>
-      <div className="titleContainer">
-        <h1 className={active ? "activeTitle" : "title"}>{title}</h1>
-        {icon}
-      </div>
-      <p>{text}</p>
-      {children}
-    </div>
-  )
-}
 
 const Description = () => {
   return (
     <SectionContent
       title="Sobre mí"
-      text="Soy un desarrollador frontend con experiencia en la creación de aplicaciones web utilizando tecnologías como React, JavaScript y CSS. Me apasiona el diseño de interfaces de usuario y la resolución de problemas. Siempre estoy buscando aprender nuevas tecnologías y mejorar mis habilidades. ¡No dudes en contactarme si tienes alguna pregunta o proyecto en mente!"
+      text="Soy un apasionado del diseño y la creación de interfaces de usuario, siempre en busca de mejorar mis habilidades y mantenerme al día con las últimas novedades en el mundo del Frontend. ¡No dudes en contactarme si tienes alguna pregunta o proyecto en mente!. Espero serte de ayuda :D"
       icon={<CiUser className="icon"/>}
       >
       </SectionContent>
@@ -96,22 +77,7 @@ const Description = () => {
   );
 }
 
-const Item = ({icon,children})=>{
-  const [active,setActive] = useState(false);
-  const handleMouseOver = ()=>{
-    setActive(true);
-  }
-  const handleMouseOut = ()=>{
-    setActive(false);
-  }
-  return(
-    <div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} className= {active? 'active':''}>
-      <div className="item">
-        {icon}{children}
-      </div>
-    </div>
-  )
-}
+
 
 const Hobbies = () => {
   return (

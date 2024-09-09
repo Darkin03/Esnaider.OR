@@ -1,61 +1,35 @@
 
-.skills {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    font-size: 40px;
-}
-
-.skills .into{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.skills .into .pintureContainer{
-    flex: 0 5 406px;
-}
-.skills .into .pintureContainer .pinture{
-    animation-name: fly;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    width: 100%;
-}
-
-.skills .into .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
 
 .skillsContainer{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
+    font-size: 25px;
+    color: #A6A6A6;
+    padding: 25px;
 }
 
-.skillsContainer .skill{
+.skillsContainer .item{
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
     font-family: 'Caveat', cursive;
-    font-size: 25px;
 }
 
-.skillsContainer .skill #icon{
-    font-size: 50px;
+.container .skillsContainer .item .icon{
+    font-size: 45px;
     transition: 0.5s;
+    color: #A6A6A6;
+    transform: scale(1.45);
+    transition: 500ms;
 }
 
-.skillsContainer .skill .activeIcon{
+
+
+
+.container .active  .skillsContainer .active .item .icon{
     color: #68e1fd;
-    transform: scale(1.01);    
-}
-
-.skillsConainer .skill .ActiveText{
-    color:#68e1fd;
+    transition: 0.5s;
+    transform: scale(1.7);
 }

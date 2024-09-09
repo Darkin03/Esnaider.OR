@@ -60,3 +60,9 @@
 .contacts .container .contactList .link .icon{
     font-size: 60px;
 }
+
+a{
+    color: #A6A6A6;
+    text-decoration: none;
+    transition: 500ms;
+}

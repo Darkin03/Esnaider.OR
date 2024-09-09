@@ -1,36 +1,67 @@
 import webDeveloper from "../images/Data Arranging_Flatline.svg";
 import { CiStar} from "react-icons/ci";
-import { useState} from "react";
-import { Skills } from "../components/Skills";
-export const SkillsSection = () =>{
-    const [active, setActive] = useState(false);
-    const mouseOver = () => {
-      setActive(true);
-    };
-    const mouseOut = () => {
-      setActive(false);
-    };
+import { SectionContent,Item } from "../components/utils";
+import { FaHtml5, FaCss3Alt, FaReact, FaBootstrap, FaNodeJs, FaPhp, FaGit } from "react-icons/fa";
+import { SiJavascript, SiTypescript, SiNextdotjs, SiMysql } from "react-icons/si";
+import { IconContext } from "react-icons";
+import "../style/skills.css";
 
+
+
+export function SkillsSection(){
     return(
+        <SectionContent
         
-        <section className ="skills" onMouseOver={mouseOver} onMouseOut={mouseOut}>
-            <div className="into">
+            img={webDeveloper}
+            title="Habilidades"
+            icon={<CiStar className="icon" />}
 
-                <div className="pintureContainer">
-                    <img className="pinture"  src={webDeveloper}/>
-                </div>
-            
-                <div className="container">
+        >
+            <section className="skillsContainer">
+            <IconContext.Provider value={{ className: "icon" }}>
+                <Item icon={<FaHtml5 />}>
+                    Hmtl 
+                </Item>
+                <Item icon={<FaCss3Alt />}>
+                    Css 
+                </Item>
+
+                <Item icon={<SiJavascript />}>
+                    Javascript 
+                </Item>
+                <Item icon={<SiTypescript />}>
+                    Typescript 
+                </Item>
+
+                <Item icon={<FaReact />}>
+                    React 
+                </Item>
+
+                <Item icon={<SiNextdotjs />}>
+                     Next 
+                </Item>
+
+                <Item icon={<FaNodeJs />}>
+                    Dibujar 
+                </Item>
+
+                <Item icon={<FaBootstrap />}>
+                    Bootstrap 
+                </Item>
+               
+                <Item icon={<FaPhp />}>
+                Php 
+                </Item>
+                <Item icon={<FaGit />}>
+                Git  
+                </Item>
+               
                 
-                    <div className="titleContainer">
-                        <h1 className={active ? "activeTitle" : "title"}>Habilidades</h1>    
-                        <CiStar id="icon" className={ active ? "activeIcon" : "inactiveIcon"}/>
-                    </div>    
-                
-                </div>
-            </div>
-            
-            <Skills/>
+                <Item icon={<SiMysql />}>
+                Mysql 
+                </Item>
+            </IconContext.Provider>
         </section>
+        </SectionContent>
     )
 }

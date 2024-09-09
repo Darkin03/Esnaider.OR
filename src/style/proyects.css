@@ -1,15 +1,9 @@
-.proyectsSection{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    font-size: 40px;
-}
 
 .proyects{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
     padding: 5px;
 }
 
@@ -26,7 +20,7 @@
     border-radius: 20px;
     transition: 500ms;
     flex: 0 1 250px;
-    height: 300px;
+    height: 350px;
     overflow: hidden;
 }
 
