@@ -1,3 +1,4 @@
+import React, {useState} from 'react';
 
 import { CiLaptop} from "react-icons/ci";
 import '../style/proyects.css'
