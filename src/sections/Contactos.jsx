@@ -16,18 +16,17 @@ export function Contacts (){
     >
 
       <NavLink fontsize={'75px'} color={'red'} > 
-          <Item icon={<CiLinkedin className="icon"/>}>
-            <a  target="_blank" href="https://www.linkedin.com/in/esnaideror/"></a>
-          </Item>
-         
-          <Item icon={<CiInstagram className="icon"/>}>
-            <a  target="_blank" href="https://www.linkedin.com/in/esnaideror/"></a>
-          </Item>
-         
-          <Item icon={<CiTwitter className="icon"/>}>
-            <a  target="_blank" href="https://www.linkedin.com/in/esnaideror/"></a>
-          </Item>
-         
+        <Item>
+          <a  target="_blank" href="https://www.linkedin.com/in/esnaideror/"><CiLinkedin className="icon"/></a>
+        </Item>
+
+        <Item>
+          <a  target="_blank" href="https://www.instagram.com/esnaider.or/"><CiInstagram className="icon"/></a>
+        </Item>
+
+        <Item>
+          <a  target="_blank" href="https://twitter.com/SnaiderOrtega10"><CiTwitter className="icon"/></a>
+        </Item>
       </NavLink>
     </SectionContent>
   );

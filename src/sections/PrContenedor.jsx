@@ -23,7 +23,7 @@ export function Prcontenedor (){
   
                 <div className="content">
                     <h3 className="title">Portafolio</h3>
-                    <p className="description">Portafolio donde está toda la información de mi</p>
+                    <p className="description">Encuentra y conoce todo sobre mi!</p>
                 </div>
             </a>
 
@@ -34,7 +34,8 @@ export function Prcontenedor (){
 
                 <div className="content">
                     <h3 className="title">Portflolio</h3>
-                    <p className="description">WikiPedia de peliculas y series</p>
+                    <p className="description">Wikipedia con la información de tus 
+                    series y películas favoritas!</p>
                 </div>
                 </a>
         </section>

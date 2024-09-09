@@ -69,7 +69,7 @@ const Description = () => {
   return (
     <SectionContent
       title="Sobre mí"
-      text="Soy un desarrollador frontend con experiencia en la creación de aplicaciones web utilizando tecnologías como React, JavaScript y CSS. Me apasiona el diseño de interfaces de usuario y la resolución de problemas. Siempre estoy buscando aprender nuevas tecnologías y mejorar mis habilidades. ¡No dudes en contactarme si tienes alguna pregunta o proyecto en mente!"
+      text="Soy un apasionado del diseño y la creación de interfaces de usuario, siempre en busca de mejorar mis habilidades y mantenerme al día con las últimas novedades en el mundo del Frontend. ¡No dudes en contactarme si tienes alguna pregunta o proyecto en mente!. Espero serte de ayuda :D"
       icon={<CiUser className="icon"/>}
       >
       </SectionContent>
