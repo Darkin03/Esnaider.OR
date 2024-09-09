@@ -4,8 +4,54 @@ import '../style/proyects.css'
 import Portflolio from '../images/Proyects/Portflolio.jpeg'
 import WikiWatch from '../images/Proyects/Wikiwatch.jpeg'
 
-import { SectionContent } from "../components/utils";
 
+export const SectionContent = ({img, title, text, icon, children}) => {
+    const [active, setActive] = useState(false);
+    const handleMouseOver = () => {
+        setActive(true);
+    };
+    const handleMouseOut = () => {
+        setActive(false);
+    };
+    return (
+        <div className="container" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+            <div className={active ? "activeContent" : ""} id='content'>
+                <div className='into'>
+                    {img && (
+                        <div className='pintureContainer'>
+                            <img className="pinture" src={img} />
+                        </div>
+                    )}
+                    <div className="titleContainer">
+                        <h1 className='title'>{title}</h1>
+                        
+                        {icon}
+                        
+                    </div>
+                </div>
+                <p>{text}</p>
+                {children}
+            </div>
+        </div>
+    );
+}
+  
+  export const Item = ({icon,children})=>{
+    const [active,setActive] = useState(false);
+    const handleMouseOver = ()=>{
+      setActive(true);
+    }
+    const handleMouseOut = ()=>{
+      setActive(false);
+    }
+    return(
+      <div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} className= {active? 'active':''}>
+        <div className="item">
+          {icon}{children}
+        </div>
+      </div>
+    )
+  }
 
 export function Prcontenedor (){
 
