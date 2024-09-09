@@ -1,5 +1,5 @@
 import  {SectionContent,Item} from  "./ComponentUtils";
-import webDeveloper from "../images/Data Arranging_Flatline.svg";
+import webDeveloper from "../images/Data Arranging_Flatline.webp";
 import { CiStar} from "react-icons/ci";
 import { FaHtml5, FaCss3Alt, FaReact, FaBootstrap, FaNodeJs, FaPhp, FaGit } from "react-icons/fa";
 import { SiJavascript, SiTypescript, SiNextdotjs, SiMysql } from "react-icons/si";

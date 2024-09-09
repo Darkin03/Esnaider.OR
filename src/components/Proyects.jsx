@@ -1,7 +1,7 @@
 import { SectionContent,Item } from "./ComponentUtils";
 import { CiLaptop} from "react-icons/ci";
-import Portflolio from '../images/Proyects/Portflolio.jpeg'
-import WikiWatch from '../images/Proyects/Wikiwatch.jpeg'
+import Portflolio from '../images/Proyects/Portflolio.webp'
+import WikiWatch from '../images/Proyects/Wikiwatch.webp'
 import '../style/proyects.css'
 
 export function Proyects (){
@@ -13,7 +13,7 @@ export function Proyects (){
             icon={<CiLaptop className="icon" />}
         >
            <section className="proyects">
-            <a href='https://github.com/Darkin03/Esnaider.OR' className="proyect">
+            <a target="_blank" href='https://github.com/Darkin03/Esnaider.OR' className="proyect">
                 <div className="pintureContainer">
                     <img className="pinture" src={Portflolio}  />
                 </div>
@@ -24,7 +24,7 @@ export function Proyects (){
                 </div>
             </a>
 
-            <a href='https://code-world-co.github.io/WikiWatch/' className="proyect">
+            <a target="_blank" href='https://code-world-co.github.io/WikiWatch/' className="proyect">
                 <div className="pintureContainer">
                     <img className="pinture" src={WikiWatch} />
                 </div>

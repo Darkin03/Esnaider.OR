@@ -1,6 +1,6 @@
-import { SectionContent,Item } from "./ComponentUtils";
+import { Item, SectionContentLinks } from "./ComponentUtils";
 import { CiInstagram, CiLinkedin, CiPhone, CiTwitter } from "react-icons/ci";
-import webDeveloper from "../images/Calling_Flatline.svg";
+import webDeveloper from "../images/CallingFlatline.webp";
 import '../style/contacts.css'
 import { NavLink } from "./LinksShorts";
 
@@ -8,13 +8,13 @@ import { NavLink } from "./LinksShorts";
 
 export function Contacts (){
   return (
-    <SectionContent
+    <SectionContentLinks
       img={webDeveloper}
       title="Contactos"
       icon={<CiPhone  className="icon"/>}
     >
 
-      <NavLink fontsize={'75px'} color={'red'} > 
+      <NavLink fontsize={'65px'} color={'red'} > 
         <Item>
           <a  target="_blank" href="https://www.linkedin.com/in/esnaideror/"><CiLinkedin className="icon"/></a>
         </Item>
@@ -27,6 +27,6 @@ export function Contacts (){
           <a  target="_blank" href="https://twitter.com/SnaiderOrtega10"><CiTwitter className="icon"/></a>
         </Item>
       </NavLink>
-    </SectionContent>
+    </SectionContentLinks>
   );
 };

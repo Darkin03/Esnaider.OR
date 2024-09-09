@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect,  useState } from "react";
 import { LinkApp, NavLink, NavWeb } from "./LinksShorts";
 import { CiPhone, CiLaptop, CiMedal, CiUser} from "react-icons/ci";
 import { FaBars } from "react-icons/fa";
-import webDeveloper from "../images/Web Developer_Flatline.svg";
+import webDeveloper from "../images/Web Developer_Flatline.webp";
 import {
   CiLinkedin,
   CiServer,

@@ -1,8 +1,8 @@
 import  useGetJobs  from "../hooks/jobs";
 import { NavLink, NavWeb } from "./LinksShorts";
 import { SectionContent,Item } from "./ComponentUtils";
-import data_file from "../images/Personal data _Flatline.svg";
-import webDeveloper from "../images/Web Developer_Flatline.svg";
+import data_file from "../images/Personal data _Flatline.webp";
+import webDeveloper from "../images/Web Developer_Flatline.webp";
 import "../style/aboutMe.css";
 import {
   CiHeadphones,
