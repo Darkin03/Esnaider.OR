@@ -1,29 +1,27 @@
 import data_file from "../images/Personal data _Flatline.svg";
 import webDeveloper from "../images/Web Developer_Flatline.svg";
 import "../style/aboutMe.css";
-import { jobs } from "../data/jobs";
+import  useGetJobs  from "../hooks/jobs";
+import { NavLink, NavWeb } from "./Enlace";
 import {
   CiHeadphones,
   CiPen,
   CiPenpot,
   CiTimer,
   CiPizza,
-  CiGlass,
   CiHeart,
   CiUser,
   CiLinkedin,
   CiServer,
 } from "react-icons/ci";
 import { FaGithub } from "react-icons/fa";
-import { useState } from "react";
-import { MdWorkOutline } from "react-icons/md";
+import {  useState ,useEffect} from "react";
+import { MdWorkOutline,MdTaskAlt} from "react-icons/md";
+import { CgGym } from "react-icons/cg";
 
 const Into = () => {
   return (
     <section className="intoAbout">
-
-
-
       <div className="into">
         <div className="pintureContainer">
           <img className="pinture" src={webDeveloper} />
@@ -38,22 +36,19 @@ const Into = () => {
         </div>
       </div>
 
-      <div className="navLink">
-          
-          <a className="link" target="_blank"  href="https://www.linkedin.com/in/esnaideror/">
+      <NavLink fontsize={'45px'}>
+        <NavWeb link="https://www.linkedin.com/in/esnaideror/">
           <CiLinkedin />
-          </a>
-          
-          <a className="link" target="_blank" href="https://github.com/Darkin03">
-          <CiServer />
-          </a>
+        </NavWeb>
 
-          <a className="link" target="_blank" href="https://github.com/Darkin03/Esnaider.OR">
+        <NavWeb link="https://github.com/Darkin03">
           <FaGithub />
-          </a>
-         
-      </div>
+        </NavWeb>
 
+        <NavWeb link="https://github.com/Darkin03/Esnaider.OR">
+          <CiServer />
+        </NavWeb>
+      </NavLink>
 
       <div className="wapeContainer">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -69,7 +64,7 @@ const Into = () => {
   );
 }
 
-const Description = () => {
+const SectionContent = ({title,text,icon,children})=>{
   const [active, setActive] = useState(false);
   const mouseOver = () => {
     setActive(true);
@@ -77,173 +72,158 @@ const Description = () => {
   const mouseOut = () => {
     setActive(false);
   };
-  return (
-    <div  className="container" onMouseOver={mouseOver} onMouseOut={mouseOut}>
+  return(
+    <div className="container" onMouseOver={mouseOver} onMouseOut={mouseOut}>
       <div className="titleContainer">
-        <h1 className={active ? "activeTitle" : "title"}>Sobre Mi</h1>
-        <CiUser id="icon" className={ active ? "activeIcon" : "inactiveIcon"}/>
+        <h1 className={active ? "activeTitle" : "title"}>{title}</h1>
+        {icon}
       </div>
-
-      <p>
-        Mi nombre es Esnaider Ortega, 
-        y me apasiona ser autodidacta para perfeccionar constantemente mis habilidades como desarrollador.
-         Busco destacarme en el dinámico mundo del desarrollo web,
-          siempre en busca de oportunidades para aplicar mis conocimientos y trabajar de la mejor manera.
-          <br></br>
-        Actualmente estoy en el ultimo año de la carrera de Ingenieria de Sistemas 
-        en la Universidad del sinu (Monteria - Colombia).
-      </p>
+      <p>{text}</p>
+      {children}
     </div>
-  );
-};
-
-const  JobsList = (props) => {
-
-  const [jobActive, setJobActive] = useState(false); 
-  const mouseOver = () => {
-      setJobActive(true);
-  };
-  const mouseOut = () => {
-      setJobActive(false);
-  };
-
-  return (
-      <li  onMouseOver={mouseOver} onMouseOut={mouseOut}>
-            <div className="job"> 
-              <h3 className="titleCompany">
-                  {props.company}
-                  <MdWorkOutline className= { jobActive? 'iconActive':'icon' }  />
-               </h3>
-              <div className="titleDates">
-                <p>{props.iniDate}</p>
-                <p>{props.endDate}</p>
-              </div>
-              <h4>{props.rol}</h4>
-              <p>{props.description}</p>
-            </div>         
-          </li>
   )
 }
 
-const Jobs = () => {
-  const [active, setActive] = useState(false);
-  const mouseOver = () => {
+const Description = () => {
+  return (
+    <SectionContent
+      title="Sobre mí"
+      text="Soy un desarrollador frontend con experiencia en la creación de aplicaciones web utilizando tecnologías como React, JavaScript y CSS. Me apasiona el diseño de interfaces de usuario y la resolución de problemas. Siempre estoy buscando aprender nuevas tecnologías y mejorar mis habilidades. ¡No dudes en contactarme si tienes alguna pregunta o proyecto en mente!"
+      icon={<CiUser className="icon"/>}
+      >
+      </SectionContent>
+    
+  );
+}
+
+const Item = ({icon,children})=>{
+  const [active,setActive] = useState(false);
+  const handleMouseOver = ()=>{
     setActive(true);
+  }
+  const handleMouseOut = ()=>{
+    setActive(false);
+  }
+  return(
+    <div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} className= {active? 'active':''}>
+      <div className="item">
+        {icon}{children}
+      </div>
+    </div>
+  )
+}
+
+const Hobbies = () => {
+  return (
+      <SectionContent
+        title="Hobbies"
+        icon={<CiPizza className="icon" />}
+      >
+        <div className="hobbies">
+          <Item icon={<CiPen className= "icon" />}>
+            Dibujar 
+          </Item>
+
+          <Item icon={<CiHeadphones className= "icon" />}>
+            Escuchar Musica 
+          </Item>  
+
+          <Item icon={<CiPenpot className= "icon" />}>
+            Leer 
+          </Item>    
+
+          <Item icon={<CgGym  className= "icon" />}>
+            Ir al gym 
+          </Item>       
+        </div>
+      </SectionContent>
+);
+};
+
+
+
+const Job = ({ company, iniDate, endDate, rol, description, task }) => {
+  const [jobActive, setJobActive] = useState(false);
+  const mouseOver = () => {
+    setJobActive(true);
   };
   const mouseOut = () => {
-    setActive(false);
+    setJobActive(false);
   };
-  return (
-    <div  className="container" onMouseOver={mouseOver} onMouseOut={mouseOut}>
-      <div className="titleContainer">
-        <h1 className={active ? "activeTitle" : "title"}>Experiencia</h1>
-        <CiTimer id="icon" className={ active ? "activeIcon" : "inactiveIcon"}/>
-      </div>
 
-      <p>Actualmente estas son mis experiencias laborales:</p>
-        <ul className="jobs">
-          {jobs.map((job) => (
-            <JobsList 
+  return (
+    <li className="joblist" onMouseOver={mouseOver} onMouseOut={mouseOut}>
+      <div className="job">
+        <h3 className="titleCompany">
+          {company}
+          <MdWorkOutline className={jobActive ? 'iconActive' : 'icon'} />
+        </h3>
+        <div className="rol">
+          <h4 className="name">{rol}</h4>
+          <div className="titleDates">
+            <div>{iniDate}</div>
+            -
+            <div>{endDate}</div>
+          </div>
+        </div>
+
+        <p>{description}</p>
+        
+        {
+          task.map((t) => (
+            <Item key={t.id}  icon = {<MdTaskAlt className="icon" />}>
+             
+              <p>{t.description}</p>
+            </Item>
+          ))
+        }
+
+      </div>
+    </li>
+  );
+};
+
+const Jobs = () => {
+  const [jobs, setJobs] = useState(null);
+  const getJobs = useGetJobs(); // Move the hook outside the component
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const { data: jobs } =  getJobs // Call the hook inside the effect
+      setJobs(jobs);
+    };
+
+    fetchData();
+  });
+
+  return (
+    <SectionContent
+      title="Experiencia"
+      text="Actualmente estas son mis experiencias laborales:"
+      icon={<CiTimer className="icon" />}
+    >
+      <ul>
+        {jobs &&
+          jobs.map((job) => (
+            <Job
               key={job.id}
               company={job.company}
               iniDate={job.iniDate}
               endDate={job.endDate}
               rol={job.rol}
               description={job.description}
-              />
+              task={job.task}
+            />
           ))}
-
-        </ul>
-
-      
-    </div>
+      </ul>
+    </SectionContent>
   );
-};
-
-const HobbiesList = () => {
-  const [iconActive, setIconActive] = useState({
-    headphones: false,
-    penpot: false,
-    pen: false,
-    glass: false,
-  });
-
-  const handleItemOver = (icon) => {
-    setIconActive((prev) => ({ ...prev, [icon]: true }));
-  };
-
-  const handleItemOut = (icon) => {
-    setIconActive((prev) => ({ ...prev, [icon]: false }));
-  };
-
-  return (
-    <ul className="hobbies">
-      <li>
-        <div
-            className="item"
-             onMouseOver={() => handleItemOver("headphones")}
-             onMouseOut={() => handleItemOut("headphones")}
-        >
-          <CiHeadphones className= { iconActive.headphones? 'iconActive':'icon'} /> Escuchar Musica
-        </div>    
-      </li>
-
-      <li>
-        <div
-            className="item"
-             onMouseOver={() => handleItemOver("penpot")}
-             onMouseOut={() => handleItemOut("penpot")}
-        >
-          <CiPenpot  className= { iconActive.penpot? 'iconActive':'icon'} /> Leer
-        </div>    
-      </li>
-
-      <li>
-        <div
-            className="item"
-             onMouseOver={() => handleItemOver("pen")}
-             onMouseOut={() => handleItemOut("pen")}
-        >
-          <CiPen  className= { iconActive.pen? 'iconActive':'icon'} /> Dibujar
-        </div>    
-      </li>
-
-      <li>
-        <div
-            className="item"
-             onMouseOver={() => handleItemOver("glass")}
-             onMouseOut={() => handleItemOut("glass")}
-        >
-          <CiGlass  className= { iconActive.glass? 'iconActive':'icon'} /> Una buena taza de cafe
-        </div>    
-      </li>
-  
-    </ul>
-  );
-};
-
-const Hobbies = () => {
-  const [active, setActive] = useState(false);
-  const mouseOver = () => {
-    setActive(true);
-  };
-  const mouseOut = () => {
-    setActive(false);
-  };
-  return (
-    <div  className="container" onMouseOver={mouseOver} onMouseOut={mouseOut}>
-      <div className="titleContainer">
-        <h1 className={active ? "activeTitle" : "title"}>Pasatiempos</h1>
-        <CiPizza id="icon" className={ active ? "activeIcon" : "inactiveIcon"}/>
-      </div>
-
-      <HobbiesList />
-</div>
-);
 };
 
 
 export function AboutMe() {
+
+
   return (
     <section>
     <Into/>
@@ -254,7 +234,7 @@ export function AboutMe() {
         <div className="infoContainer">
           <Description />
           <Hobbies />
-          <Jobs />
+          <Jobs/>
         </div>
       </div>
       

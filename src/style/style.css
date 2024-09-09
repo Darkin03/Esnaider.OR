@@ -28,40 +28,34 @@ body{
 }
 
 .container .titleContainer{
+    font-family: 'Permanent Marker', cursive;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 15px;
-    font-family: 'Permanent Marker', cursive;
-}
-
-.container .titleContainer .title{
+    font-size: 45px;
     color: #E5EAEF;
+    flex-wrap: wrap;
+}  
+
+.container .titleContainer .activeTitle{
+    color: #68e1fd;
+    transition: 500ms;
 }
 
-.titleContainer #icon{
+.container .titleContainer .icon{
     font-size: 1.7em;
     color: #E5EAEF;
-    transition: 0.5s;
-
-
+    transition: 500ms;
 }
 
 
-.activeIcon{
-    transition: 0.5s;
+
+.container .titleContainer:hover .icon{
+    transition: 500ms;
     scale: 1.25;
 }
 
-.inactiveIcon{
-    transition: 0.5s;
-    scale: 1;
-}
-
-.container .titleContainer .activeTitle {
-    color: #68e1fd;
-}
 
 .inactiveUp{
     display: none;

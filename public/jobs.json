@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "company": "Distracom - Colombia",
+        "rol": "Auxiliar de Soporte",
+        "iniDate": "20-abril-2023",
+        "endDate": "Actualidad",
+        "description": "Soporte y gestión en el sistema de información interno de la empresa",
+        "task": [
+            {
+                "id": 1,
+                "description": "Analice y gestione varios balances de los reportes diarios de dinero proporcionado por los usuarios"
+            },
+            {
+                "id": 2,
+                "description": "Realice asesoría y soporte a las peticiones realizadas por los usuarios mediante un sistema de call-center"
+            },
+            {
+                "id": 3,
+                "description": "Realice múltiples pruebas de bugs y mejoras para el sistema de información de la empresa para futuras actualizaciones"
+            }
+        ]
+    }
+]
