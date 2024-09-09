@@ -30,10 +30,9 @@ export function NavWeb({link,children}){
     )
 }
 
-
-export function NavLink({fontsize,children}) {
+export function NavLink({fontsize,color,children}) {
     return(
-        <div style={{fontSize: fontsize}}>
+        <div style={{fontSize: fontsize, color: color}}>
             <nav className="nav">
                 {children}
             </nav>

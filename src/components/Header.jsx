@@ -135,11 +135,11 @@ function Aside(){
               <CiLinkedin />
             </NavWeb>
 
-            <NavWeb link="https://github.com/Darkin03">
+            <NavWeb link="https://www.instagram.com/esnaider.or/">
              <FaGithub />
             </NavWeb>
   
-            <NavWeb link="https://github.com/Darkin03/Esnaider.OR">
+            <NavWeb link="https://twitter.com/SnaiderOrtega10">
              <CiServer />
             </NavWeb>
   

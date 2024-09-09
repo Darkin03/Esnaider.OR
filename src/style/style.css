@@ -57,7 +57,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 25px;
+    gap: 30px;
     font-size: 50px;
     color: #E5EAEF;
     flex-wrap: wrap;
@@ -74,12 +74,12 @@ transition: 500ms;
 }
 
 .container .activeContent .into .titleContainer .icon{
-    transform: scale(2.3);
+    transform: scale(2);
     transition: 500ms;
 }
 
 .container .activeContent  .active .item .icon{
-    transform: scale(1.25);
+    transform: scale(1.75);
     transition: 500ms;
     color: #68e1fd;
 }
@@ -127,7 +127,7 @@ transition: 500ms;
 }
 
 .up #icon{
-    font-size: 2.3em;
+    font-size: 4em;
     font-weight: 700; 
     color: #E5EAEF;
 }
