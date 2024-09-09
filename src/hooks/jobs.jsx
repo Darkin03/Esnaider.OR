@@ -9,7 +9,7 @@ import { useState, useEffect } from 'react';
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('/jobs.json');
+                const response = await fetch('jobs.json');
                 if (!response.ok) {
                     throw new Error(`Error en la solicitud: ${response.status} ${response.statusText}`);
                 }
