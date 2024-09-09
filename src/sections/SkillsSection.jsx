@@ -1,11 +1,10 @@
 import webDeveloper from "../images/Data Arranging_Flatline.svg";
 import { CiStar} from "react-icons/ci";
-import { SectionContent,Item } from "../components/utils";
-
 import { FaHtml5, FaCss3Alt, FaReact, FaBootstrap, FaNodeJs, FaPhp, FaGit } from "react-icons/fa";
 import { SiJavascript, SiTypescript, SiNextdotjs, SiMysql } from "react-icons/si";
 import { IconContext } from "react-icons";
 import "../style/skills.css";
+import { Item, SectionContent } from "../components/utils";
 
 
 
@@ -64,5 +63,7 @@ export function SkillsSection(){
             </IconContext.Provider>
         </section>
         </SectionContent>
+
+        
     )
 }
