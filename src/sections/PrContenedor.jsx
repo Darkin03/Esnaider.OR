@@ -80,7 +80,7 @@ export function Prcontenedor (){
                 </div>
 
                 <div className="content">
-                    <h3 className="title">Portflolio</h3>
+                    <h3 className="title">WikiWaych</h3>
                     <p className="description">Wikipedia con la información de tus 
                     series y películas favoritas!</p>
                 </div>
