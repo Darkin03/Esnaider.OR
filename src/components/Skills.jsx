@@ -40,7 +40,7 @@ export function Skills(){
                 </Item>
 
                 <Item icon={<FaNodeJs />}>
-                    Dibujar 
+                    NodeJs 
                 </Item>
 
                 <Item icon={<FaBootstrap />}>
